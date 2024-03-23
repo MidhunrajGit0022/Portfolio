@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
+import { Col, Container, Image, Nav, Navbar, Row } from 'react-bootstrap';
 import '../components/Portfolio.css';
+import {
+    AiFillGithub,
+    AiOutlineTwitter,
+    AiFillInstagram,
+    AiFillLinkedin,
+    AiFillMail,
+} from "react-icons/ai";
 
 
 export default function Portfolio() {
@@ -34,7 +41,7 @@ export default function Portfolio() {
         'Back-end Developer',
         'Mobile App Developer',
     ];
-  
+
     let i = 0;
     let offset = 0;
     const len = words.length;
@@ -43,7 +50,7 @@ export default function Portfolio() {
     const skip_delay = 15;
     const speed = 70;
 
-    
+
     useEffect(() => {
         const intervalId = setInterval(() => {
             if (forwards) {
@@ -93,7 +100,11 @@ export default function Portfolio() {
                 {/* <Navbar expand="lg" bg="navbarbg fixed-top" className={scrolled ? 'd-none' : ''}> */}
                 <Navbar expand="lg" className="navbarbg fixed-top " >
                     <Container>
-                        <Navbar.Brand className='d-flex'><span className="devname d-flex">Mr.Dev</span></Navbar.Brand>
+                        {/* <Navbar.Brand className='d-flex'><span className="devname d-flex">Midhun.Dev&copy;</span></Navbar.Brand> */}
+                        <Navbar.Brand className='d-flex'>
+                            <span className="devname d-flex" style={{ verticalAlign: 'top' }}>Midhun.Dev<span style={{ fontSize: '80%' }} className="ms-1"> &copy;</span></span>
+                        </Navbar.Brand>
+
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav" className={`border-0 text-center ${theme && 'p-0 rounded-1 '} `}>
                             <Nav className="ms-auto p-1">
@@ -114,25 +125,158 @@ export default function Portfolio() {
                 </Navbar>
                 {/* Navbar End*/}
 
-                {/* Section 1 */}
+                {/* Section 1 - Intro */}
                 <Container className="maincontainer" >
                     <Row>
-                        <Col lg={7} className="left-header">
-                            <div>
-                                <h1 className="leftfirsthead mb-2">Hi There!<span className="wave" role="img" aria-labelledby="wave">
-                                    👋🏻
-                                </span></h1>
-                            
-                                <h1 className="leftsecondhead">I'm <strong className="main-name">Midhun Raj</strong></h1>
-                                <div className="mt-lg-0  "><h2 className=" welcomtext ">{part}</h2></div>
+                        <Col lg={5} className="order-lg-2" >
+                            {/* <div className="rightimg">
+                                <div className="rounding-sec">
+                                    <div className="big-circle d-none d-lg-block">
+                                        <div className="icon-block">
+                                            <Image src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIHDQ_CU0W38ktREqnPwdVlGCdA_e4xbaDK9NrjFOpD2AqdcajDV3c9_R3vp034nrC9eyvMThwY8ifNpmH3_8GMg_SzAsLKcWQeSskaVl8HjVtLWilhcBNwfep0yRxq-Z_klBXoYTVX0BaE39VwJ2a-drZup5i8owkdaZF0-KhCaodrtN2Rii9HPZrdlk/s1600/github.png"
+                                                alt="" />
+                                        </div>
+                                        <div className="icon-block">
+                                            <Image src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoPvxJtYJq2-7BDn6LGcQ6QsT3Bo0vxkKu8WAOZnqsHIiTtGJqsHHHWlqqYN4iQFlVaqTaq7AFkWbY5Wrqxvk9Se1Wc_rjA7UKZoXHoxqSWXyaTg9aL9RC37H78NTnT4TwePdwqEYwVw8VxtjPoy6eG-f7RTJhX0JCa0lPmpfaz69hJ1ZHI9seBrUuvf4/s64/instagram.png"
+                                                alt="" />
+                                        </div>
+                                        <div className="icon-block">
+                                            <Image src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-WWnXxgKNxwqarx8Vr_xpaCcwOQbv7bpFxWXy1o7DCq7jZNiT3CFdAo52AvJol-C-3InAzj6B4isdJVwVCAlUY9jxqgM43wDXrmfsqL4PGr-fsBG0YjcOzwAHFscoDXg3EGlhupxjKRwrMe7Y2bX9VzTc-RY95A03bV1avKnjwJZjh0HKbGZDEa73mPU/s1600/telegram.png"
+                                                alt="" />
+                                        </div>
+                                        <div className="icon-block">
+                                            <Image src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiejpFbnjtnjhErKo-66_ATecAMmYtSrLzQYdIRMRAxLHtgMUZKnA6jGJQsTMnrniZmMhTZydWkR-l2cpZcGEBGlI4Ptl9ogR-NSPF2wNO5FQdMlL_xaGHQfPnSRIh0Lg4JX0PJLjg9p-tAL9Y8qFbbuGIW3YoolXiMja2qujyDjcFPYGzsPu-RyHle2Jc/s1600/youtube.png" alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="images">
+                                        <Image src="./assets/dp.jpg" alt="" className="img-w" />
+                                    </div>
+                                </div>
+                            </div> */}
+                            <div className="rightimg d-flex justify-content-center">
+                                <Image src="./assets/dp.jpeg" alt="" className="dpimg" />
                             </div>
                         </Col>
-                        <Col lg={5}>
-                            <h1 className="new">haiii</h1>
+                        <Col lg={7} className="left-header mt-lg-5" >
+                            {/* style={{ backgroundColor: '#da3cb7' }} */}
+                            <div>
+                                <h1 className="leftfirsthead">Hi There!<span className="wave" role="img" aria-labelledby="wave">
+                                    👋🏻
+                                </span></h1>
+
+                                <h1 className="leftsecondhead">I'm <strong className="main-name">Midhun Raj</strong></h1>
+                                <div className=" "><h2 className=" welcomtext ">{part}</h2></div>
+
+                            </div>
+                            <div>
+                                <Row className="d-flex justify-content-lg-start ">
+                                    {theme
+                                        ?
+                                        <>
+                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                                <a href="https://github.com/MidhunrajGit0022" target="_blank" rel="noreferrer" className="home-social-icons">
+                                                    <span className="social-icons">
+                                                        <AiFillGithub size={20} />
+                                                    </span>
+                                                </a>
+                                            </Col>
+                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                                <a href="https://twitter.com/Midhun_raj0077" target="_blank" rel="noreferrer" className="home-social-icons">
+                                                    <span className="social-icons">
+                                                        <AiOutlineTwitter size={20} />
+                                                    </span>
+                                                </a>
+                                            </Col>
+                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                                <a href="https://www.linkedin.com/in/midhunraj0022/" target="_blank" rel="noreferrer" className="home-social-icons">
+                                                    <span className="social-icons">
+                                                        <AiFillLinkedin size={20} />
+                                                    </span>
+                                                </a>
+                                            </Col>
+                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                                <a href="https://www.instagram.com/_mi_._dhun_/" target="_blank" rel="noreferrer" className="home-social-icons">
+                                                <span className="social-icons">
+                                                    <AiFillInstagram size={20} />
+                                                </span>
+                                                </a>
+                                            </Col>
+                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                                <a href="mailto:midhunraj0022@gmail.com" target="_blank" rel="noreferrer" className="home-social-icons">
+                                                <span className="social-icons">
+                                                     <AiFillMail size={20} />
+                                                     </span>
+                                                </a>
+                                            </Col>
+                                        </>
+                                        :
+                                        <>
+                                              <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                                <a href="https://github.com/MidhunrajGit0022" target="_blank" rel="noreferrer" className="home-social-icons">
+                                                    <span className="social-icons">
+                                                        <AiFillGithub size={20} />
+                                                    </span>
+                                                </a>
+                                            </Col>
+                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                                <a href="https://twitter.com/Midhun_raj0077" target="_blank" rel="noreferrer" className="home-social-icons">
+                                                    <span className="social-icons">
+                                                        <AiOutlineTwitter size={20} />
+                                                    </span>
+                                                </a>
+                                            </Col>
+                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                                <a href="https://www.linkedin.com/in/midhunraj0022/" target="_blank" rel="noreferrer" className="home-social-icons">
+                                                    <span className="social-icons">
+                                                        <AiFillLinkedin size={20} />
+                                                    </span>
+                                                </a>
+                                            </Col>
+                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                                <a href="https://www.instagram.com/_mi_._dhun_/" target="_blank" rel="noreferrer" className="home-social-icons">
+                                                <span className="social-icons">
+                                                    <AiFillInstagram size={20} />
+                                                </span>
+                                                </a>
+                                            </Col>
+                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                                <a href="mailto:midhunraj0022@gmail.com" target="_blank" rel="noreferrer" className="home-social-icons">
+                                                <span className="social-icons">
+                                                     <AiFillMail size={20} />
+                                                     </span>
+                                                </a>
+                                            </Col>
+                                        </>
+                                    }
+
+                                </Row>
+                            </div>
                         </Col>
                     </Row>
                 </Container>
                 {/* Section 1 Ended*/}
+
+
+                {/* Section 2 - About */}
+                <div>
+                    <Container>
+                        <Row>
+                            {/* <h1>hi</h1>
+                            <h1>hi</h1>
+                            <h1>hi</h1>
+                            <h1>hi</h1>
+                            <h1>hi</h1>
+                            <h1>hi</h1>
+                            <h1>hi</h1>
+                            <h1>hi</h1>
+                            <h1>hi</h1>
+                            <h1>hi</h1>
+                            <h1>hi</h1>
+                            <h1>hi</h1> */}
+                        </Row>
+                    </Container>
+                </div>
+                  {/* Section 2 Ended*/}
             </div>
 
 
