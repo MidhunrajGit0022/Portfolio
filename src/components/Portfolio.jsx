@@ -128,7 +128,7 @@ export default function Portfolio() {
                 {/* Section 1 - Intro */}
                 <Container className="maincontainer" >
                     <Row>
-                        <Col lg={5} className="order-lg-2" >
+                        <Col lg={5} md={6} sm={12}  className="order-lg-2" >
                             {/* <div className="rightimg">
                                 <div className="rounding-sec">
                                     <div className="big-circle d-none d-lg-block">
@@ -157,7 +157,7 @@ export default function Portfolio() {
                                 <Image src="./assets/dp.jpeg" alt="" className="dpimg" />
                             </div>
                         </Col>
-                        <Col lg={7} className="left-header mt-lg-5" >
+                        <Col lg={7} md={6} sm={12}  className="left-header mt-lg-5" >
                             {/* style={{ backgroundColor: '#da3cb7' }} */}
                             <div>
                                 <h1 className="leftfirsthead">Hi There!<span className="wave" role="img" aria-labelledby="wave">
@@ -166,6 +166,11 @@ export default function Portfolio() {
 
                                 <h1 className="leftsecondhead">I'm <strong className="main-name">Midhun Raj</strong></h1>
                                 <div className=" "><h2 className=" welcomtext ">{part}</h2></div>
+                              
+                                    <p className="description">
+                                    "Brief description with insights into myself, my vocational journey and what i engage in professionally."
+                                    </p>
+                              
 
                             </div>
                             <div>

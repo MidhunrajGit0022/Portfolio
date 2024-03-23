@@ -57,6 +57,18 @@
   background-size: 500% auto;
   animation: textShine 2s ease-in-out infinite alternate;
 }
+
+.description{
+  color: #757575fe;
+  font-size: clamp(12px, 3vw, 16px);
+  font-family: cursive;
+  font-style: italic;
+  max-width: 80%;
+}
+
+
+
+
 @keyframes textShine {
   0% {
       background-position: 0% 50%;
