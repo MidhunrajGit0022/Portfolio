@@ -1,19 +1,45 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Image, Nav, Navbar, Row } from 'react-bootstrap';
-import '../components/Portfolio.css';
+import { Button, Col, Container, Image, Nav, Navbar, Row } from 'react-bootstrap';
 import {
     AiFillGithub,
-    AiOutlineTwitter,
     AiFillInstagram,
     AiFillLinkedin,
     AiFillMail,
+    AiOutlineArrowDown,
+    AiOutlineTwitter,
 } from "react-icons/ai";
+import '../components/Portfolio.css';
 
 
 export default function Portfolio() {
     const [theme, settheme] = useState(false)
     const [scrolled, setScrolled] = useState(false);
     const [part, setPart] = useState('');
+    const [button1Clicked, setButton1Clicked] = useState(true);
+    const [button2Clicked, setButton2Clicked] = useState(false);
+    const [button3Clicked, setButton3Clicked] = useState(false);
+
+    const handleButtonabout = (buttonNumber) => {
+        switch (buttonNumber) {
+            case 1:
+                setButton1Clicked(true);
+                setButton2Clicked(false);
+                setButton3Clicked(false);
+                break;
+            case 2:
+                setButton1Clicked(false);
+                setButton2Clicked(true);
+                setButton3Clicked(false);
+                break;
+            case 3:
+                setButton1Clicked(false);
+                setButton2Clicked(false);
+                setButton3Clicked(true);
+                break;
+            default:
+                break;
+        }
+    };
 
     useEffect(() => {
         console.log(theme);
@@ -33,6 +59,15 @@ export default function Portfolio() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    function handleButtonClick() {
+        const link = document.createElement('a');
+        link.href = './assets/cv.pdf';
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.download = 'cv.pdf';
+        link.click();
+    }
 
     const words = [
         'Flutter Developer',
@@ -102,16 +137,16 @@ export default function Portfolio() {
                     <Container>
                         {/* <Navbar.Brand className='d-flex'><span className="devname d-flex">Midhun.Dev&copy;</span></Navbar.Brand> */}
                         <Navbar.Brand className='d-flex'>
-                            <span className="devname d-flex" style={{ verticalAlign: 'top' }}>Midhun.Dev<span style={{ fontSize: '80%' }} className="ms-1"> &copy;</span></span>
+                            <span className="devname d-flex" style={{ verticalAlign: 'top' }}>Midhun.dev<span style={{ fontSize: '80%' }} className="ms-1"> &copy;</span></span>
                         </Navbar.Brand>
 
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav" className={`border-0 text-center ${theme && 'p-0 rounded-1 '} `}>
                             <Nav className="ms-auto p-1">
-                                <Nav.Link className='ms-4' onClick={handleNavLinkClick}><div className="navlink">Home</div></Nav.Link>
-                                <Nav.Link className='ms-4' onClick={handleNavLinkClick}><div className="navlink">About</div></Nav.Link>
-                                <Nav.Link className='ms-4' onClick={handleNavLinkClick}><div className="navlink">Projects</div></Nav.Link>
-                                <Nav.Link className='ms-4' onClick={handleNavLinkClick}><div className="navlink">Contact</div></Nav.Link>
+                                <Nav.Link href="#Home" className='ms-4' onClick={handleNavLinkClick}><div className="navlink">Home</div></Nav.Link>
+                                <Nav.Link href="#About" className='ms-4' onClick={handleNavLinkClick}><div className="navlink">About</div></Nav.Link>
+                                <Nav.Link href="#Projects" className='ms-4' onClick={handleNavLinkClick}><div className="navlink">Projects</div></Nav.Link>
+                                <Nav.Link href="#Contact" className='ms-4' onClick={handleNavLinkClick}><div className="navlink">Contact</div></Nav.Link>
                                 <Nav.Link className='ms-4' onClick={() => { settheme(!theme) }}>  {theme
                                     ?
                                     <svg viewBox="0 0 24 24" width="24" height="24" className="pointer navlink lightToggleIcon_pyhR" onClick={handleNavLinkClick}><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg>
@@ -126,9 +161,9 @@ export default function Portfolio() {
                 {/* Navbar End*/}
 
                 {/* Section 1 - Intro */}
-                <Container className="maincontainer" >
+                <Container id="Home" className="maincontainer" >
                     <Row>
-                        <Col lg={5} md={6} sm={12}  className="order-lg-2" >
+                        <Col lg={5} md={6} sm={12} className="order-lg-2" >
                             {/* <div className="rightimg">
                                 <div className="rounding-sec">
                                     <div className="big-circle d-none d-lg-block">
@@ -157,7 +192,7 @@ export default function Portfolio() {
                                 <Image src="./assets/dp.jpeg" alt="" className="dpimg" />
                             </div>
                         </Col>
-                        <Col lg={7} md={6} sm={12}  className="left-header mt-lg-5" >
+                        <Col lg={7} md={6} sm={12} className="left-header" >
                             {/* style={{ backgroundColor: '#da3cb7' }} */}
                             <div>
                                 <h1 className="leftfirsthead">Hi There!<span className="wave" role="img" aria-labelledby="wave">
@@ -166,94 +201,109 @@ export default function Portfolio() {
 
                                 <h1 className="leftsecondhead">I'm <strong className="main-name">Midhun Raj</strong></h1>
                                 <div className=" "><h2 className=" welcomtext ">{part}</h2></div>
-                              
-                                    <p className="description">
+
+                                <p className="description">
                                     "Brief description with insights into myself, my vocational journey and what i engage in professionally."
-                                    </p>
-                              
+                                </p>
+
 
                             </div>
                             <div>
-                                <Row className="d-flex justify-content-lg-start ">
+                                <Row className="d-flex proicons">
                                     {theme
                                         ?
                                         <>
-                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
                                                 <a href="https://github.com/MidhunrajGit0022" target="_blank" rel="noreferrer" className="home-social-icons">
                                                     <span className="social-icons">
                                                         <AiFillGithub size={20} />
                                                     </span>
                                                 </a>
                                             </Col>
-                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
                                                 <a href="https://twitter.com/Midhun_raj0077" target="_blank" rel="noreferrer" className="home-social-icons">
                                                     <span className="social-icons">
                                                         <AiOutlineTwitter size={20} />
                                                     </span>
                                                 </a>
                                             </Col>
-                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
                                                 <a href="https://www.linkedin.com/in/midhunraj0022/" target="_blank" rel="noreferrer" className="home-social-icons">
                                                     <span className="social-icons">
                                                         <AiFillLinkedin size={20} />
                                                     </span>
                                                 </a>
                                             </Col>
-                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
                                                 <a href="https://www.instagram.com/_mi_._dhun_/" target="_blank" rel="noreferrer" className="home-social-icons">
-                                                <span className="social-icons">
-                                                    <AiFillInstagram size={20} />
-                                                </span>
+                                                    <span className="social-icons">
+                                                        <AiFillInstagram size={20} />
+                                                    </span>
                                                 </a>
                                             </Col>
-                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
                                                 <a href="mailto:midhunraj0022@gmail.com" target="_blank" rel="noreferrer" className="home-social-icons">
-                                                <span className="social-icons">
-                                                     <AiFillMail size={20} />
-                                                     </span>
+                                                    <span className="social-icons">
+                                                        <AiFillMail size={20} />
+                                                    </span>
                                                 </a>
                                             </Col>
                                         </>
                                         :
                                         <>
-                                              <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
                                                 <a href="https://github.com/MidhunrajGit0022" target="_blank" rel="noreferrer" className="home-social-icons">
                                                     <span className="social-icons">
                                                         <AiFillGithub size={20} />
                                                     </span>
                                                 </a>
                                             </Col>
-                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
                                                 <a href="https://twitter.com/Midhun_raj0077" target="_blank" rel="noreferrer" className="home-social-icons">
                                                     <span className="social-icons">
                                                         <AiOutlineTwitter size={20} />
                                                     </span>
                                                 </a>
                                             </Col>
-                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
                                                 <a href="https://www.linkedin.com/in/midhunraj0022/" target="_blank" rel="noreferrer" className="home-social-icons">
                                                     <span className="social-icons">
                                                         <AiFillLinkedin size={20} />
                                                     </span>
                                                 </a>
                                             </Col>
-                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
                                                 <a href="https://www.instagram.com/_mi_._dhun_/" target="_blank" rel="noreferrer" className="home-social-icons">
-                                                <span className="social-icons">
-                                                    <AiFillInstagram size={20} />
-                                                </span>
+                                                    <span className="social-icons">
+                                                        <AiFillInstagram size={20} />
+                                                    </span>
                                                 </a>
                                             </Col>
-                                            <Col xs={2} sm={2} md={2} lg={1}  className="social-icons">
+                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
                                                 <a href="mailto:midhunraj0022@gmail.com" target="_blank" rel="noreferrer" className="home-social-icons">
-                                                <span className="social-icons">
-                                                     <AiFillMail size={20} />
-                                                     </span>
+                                                    <span className="social-icons">
+                                                        <AiFillMail size={20} />
+                                                    </span>
                                                 </a>
                                             </Col>
                                         </>
                                     }
-
+                                </Row>
+                                <Row>
+                                    {theme ? <>
+                                        <div className="resumebtn">
+                                            <Button variant="outline-light" onClick={handleButtonClick} type="button" className="mt-4 rounded-5">
+                                                Get Resume
+                                            </Button>
+                                        </div>
+                                    </>
+                                        :
+                                        <div className="resumebtn">
+                                            <Button variant="outline-dark" onClick={handleButtonClick} type="button" className="mt-4 rounded-5">
+                                                Get Resume
+                                            </Button>
+                                        </div>
+                                    }
                                 </Row>
                             </div>
                         </Col>
@@ -264,24 +314,124 @@ export default function Portfolio() {
 
                 {/* Section 2 - About */}
                 <div>
-                    <Container>
+                    <Container id="About" className="mt-5" >
+                    {/* style={{ backgroundColor: '#da3cb7' }} */}
                         <Row>
-                            {/* <h1>hi</h1>
-                            <h1>hi</h1>
-                            <h1>hi</h1>
-                            <h1>hi</h1>
-                            <h1>hi</h1>
-                            <h1>hi</h1>
-                            <h1>hi</h1>
-                            <h1>hi</h1>
-                            <h1>hi</h1>
-                            <h1>hi</h1>
-                            <h1>hi</h1>
-                            <h1>hi</h1> */}
+                            <Col lg={7} className="order-lg-2">
+                                <div className="p-5 mt-lg-5 aboutdiv">
+                                    <h5 className="navheads text-secondary mb-3"><b><i>{'<--  Who am I  --/>'}</i></b></h5>
+                                    <p className="aboutpara">Experienced developer adept in Flutter and MERN stack technologies
+                                        (Flutter, Firebase, MongoDB, Express.js, React.js, Node.js).
+                                        Skilled in frontend and backend development, with a focus on user-friendly design.
+                                        Eager to collaborate and learn within a development team.</p>
+                                    <Row>
+                                        <Col lg={4}>
+                                            <span className="aboutcategoryhead" onClick={() => handleButtonabout(1)}>Skills</span>
+                                        </Col>
+                                        <Col lg={4}>
+                                            <span className="aboutcategoryhead" onClick={() => handleButtonabout(2)}>Experience</span>
+                                        </Col>
+                                        <Col lg={4}>
+                                            <span className="aboutcategoryhead" onClick={() => handleButtonabout(3)}>Education</span>
+                                        </Col>
+
+
+                                    </Row>
+                                    <Row className="mt-4">
+                                        {
+                                            button1Clicked &&
+                                            <div>
+                                                <Row>
+                                                    <div>
+                                                        <Row>
+                                                            <span className="aboutrole">Web Development</span>
+                                                        </Row>
+                                                        <Row>
+                                                            <span className="aboutcontent">Web App Development</span>
+                                                        </Row>
+                                                    </div>
+                                                </Row>
+                                                <Row>
+                                                    <div className="mt-2">
+                                                        <Row>
+                                                            <span className="aboutrole">App Development</span>
+                                                        </Row>
+                                                        <Row>
+                                                            <span className="aboutcontent">Android App Development</span>
+                                                        </Row>
+                                                    </div>
+                                                </Row>
+                                            </div>
+                                        }
+                                        {
+                                            button2Clicked &&
+                                            <div>
+                                                <Row>
+                                                    <div>
+                                                        <Row>
+                                                            <span className="aboutrole">2023 - Current</span>
+                                                        </Row>
+                                                        <Row>
+                                                            <span className="aboutcontent">Softzane Solutions</span>
+                                                        </Row>
+                                                    </div>
+                                                </Row>
+                                            </div>
+                                        }
+                                        {
+                                            button3Clicked &&
+                                            <div>
+                                                <Row>
+                                                    <div>
+                                                        <Row>
+                                                            <span className="aboutrole">2018</span>
+                                                        </Row>
+                                                        <Row>
+                                                            <span className="aboutcontent">Boys High Secondary School, Punalur - Kollam, Kerala</span>
+                                                        </Row>
+                                                    </div>
+                                                </Row>
+                                                <Row>
+                                                    <div className="mt-2">
+                                                        <Row>
+                                                            <span className="aboutrole">2018 - 2020</span>
+                                                        </Row>
+                                                        <Row>
+                                                            <span className="aboutcontent">Boys Higher Secondary School, Punalur - Kollam, Kerala</span>
+                                                        </Row>
+                                                    </div>
+                                                </Row>
+                                                <Row>
+                                                    <div className="mt-2">
+                                                        <Row>
+                                                            <span className="aboutrole">2020 - 2023</span>
+                                                        </Row>
+                                                        <Row>
+                                                            <span className="aboutcontent">University Institute of Technology, Pathanapuram - Kollam, Kerala</span>
+                                                        </Row>
+                                                    </div>
+                                                </Row>
+                                            </div>
+                                        }
+
+                                    </Row>
+                                </div>
+                            </Col>
+                            <Col lg={5} className="d-none d-lg-block">
+                                <>
+                                   <Container>
+                                   <div className="p-5 mt-lg-5 d-flex  justify-content-center align-items-center  ">
+                                        <Image src="./assets/dp.jpeg" height={500} alt="Aboutpic"></Image>
+                                    </div>
+                                   </Container>
+                                   </>
+
+                            </Col>
+
                         </Row>
                     </Container>
                 </div>
-                  {/* Section 2 Ended*/}
+                {/* Section 2 Ended*/}
             </div>
 
 
