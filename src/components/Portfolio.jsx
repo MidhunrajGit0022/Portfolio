@@ -5,8 +5,7 @@ import {
     AiFillInstagram,
     AiFillLinkedin,
     AiFillMail,
-    AiOutlineArrowDown,
-    AiOutlineTwitter,
+    AiOutlineTwitter
 } from "react-icons/ai";
 import '../components/Portfolio.css';
 
@@ -19,32 +18,63 @@ export default function Portfolio() {
     const [button2Clicked, setButton2Clicked] = useState(false);
     const [button3Clicked, setButton3Clicked] = useState(false);
 
+    // const handleButtonabout = (buttonNumber) => {
+    //     switch (buttonNumber) {
+    //         case 1:
+    //             setButton1Clicked(true);
+    //             setButton2Clicked(false);
+    //             setButton3Clicked(false);
+    //             break;
+    //         case 2:
+    //             setButton1Clicked(false);
+    //             setButton2Clicked(true);
+    //             setButton3Clicked(false);
+    //             break;
+    //         case 3:
+    //             setButton1Clicked(false);
+    //             setButton2Clicked(false);
+    //             setButton3Clicked(true);
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    // };
+    let buttonClickTimeout;
     const handleButtonabout = (buttonNumber) => {
-        switch (buttonNumber) {
-            case 1:
-                setButton1Clicked(true);
-                setButton2Clicked(false);
-                setButton3Clicked(false);
-                break;
-            case 2:
-                setButton1Clicked(false);
-                setButton2Clicked(true);
-                setButton3Clicked(false);
-                break;
-            case 3:
-                setButton1Clicked(false);
-                setButton2Clicked(false);
-                setButton3Clicked(true);
-                break;
-            default:
-                break;
-        }
+        const updateStateWithDelay = (buttonNumberToUpdate) => {
+            switch (buttonNumberToUpdate) {
+                case 1:
+                    setButton1Clicked(true);
+                    setButton2Clicked(false);
+                    setButton3Clicked(false);
+                    break;
+                case 2:
+                    setButton1Clicked(false);
+                    setButton2Clicked(true);
+                    setButton3Clicked(false);
+                    break;
+                case 3:
+                    setButton1Clicked(false);
+                    setButton2Clicked(false);
+                    setButton3Clicked(true);
+                    break;
+                default:
+                    break;
+            }
+        };
+    
+        clearTimeout(buttonClickTimeout);
+    
+       
+        buttonClickTimeout = setTimeout(() => {
+            updateStateWithDelay(buttonNumber);
+        }, 300); 
     };
+    
 
     useEffect(() => {
         console.log(theme);
         document.body.className = theme ? 'darkTheme' : 'lightTheme';
-        // 
     }, [theme])
 
     useEffect(() => {
@@ -60,14 +90,14 @@ export default function Portfolio() {
         };
     }, []);
 
-    function handleButtonClick() {
-        const link = document.createElement('a');
-        link.href = './assets/cv.pdf';
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-        link.download = 'cv.pdf';
-        link.click();
-    }
+    // function handleButtonClick() {
+    //     const link = document.createElement('a');
+    //     link.href = './assets/cv.pdf';
+    //     link.target = '_blank';
+    //     link.rel = 'noopener noreferrer';
+    //     link.download = 'cv.pdf';
+    //     link.click();
+    // }
 
     const words = [
         'Flutter Developer',
@@ -164,30 +194,7 @@ export default function Portfolio() {
                 <Container id="Home" className="maincontainer" >
                     <Row>
                         <Col lg={5} md={6} sm={12} className="order-lg-2" >
-                            {/* <div className="rightimg">
-                                <div className="rounding-sec">
-                                    <div className="big-circle d-none d-lg-block">
-                                        <div className="icon-block">
-                                            <Image src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIHDQ_CU0W38ktREqnPwdVlGCdA_e4xbaDK9NrjFOpD2AqdcajDV3c9_R3vp034nrC9eyvMThwY8ifNpmH3_8GMg_SzAsLKcWQeSskaVl8HjVtLWilhcBNwfep0yRxq-Z_klBXoYTVX0BaE39VwJ2a-drZup5i8owkdaZF0-KhCaodrtN2Rii9HPZrdlk/s1600/github.png"
-                                                alt="" />
-                                        </div>
-                                        <div className="icon-block">
-                                            <Image src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhoPvxJtYJq2-7BDn6LGcQ6QsT3Bo0vxkKu8WAOZnqsHIiTtGJqsHHHWlqqYN4iQFlVaqTaq7AFkWbY5Wrqxvk9Se1Wc_rjA7UKZoXHoxqSWXyaTg9aL9RC37H78NTnT4TwePdwqEYwVw8VxtjPoy6eG-f7RTJhX0JCa0lPmpfaz69hJ1ZHI9seBrUuvf4/s64/instagram.png"
-                                                alt="" />
-                                        </div>
-                                        <div className="icon-block">
-                                            <Image src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-WWnXxgKNxwqarx8Vr_xpaCcwOQbv7bpFxWXy1o7DCq7jZNiT3CFdAo52AvJol-C-3InAzj6B4isdJVwVCAlUY9jxqgM43wDXrmfsqL4PGr-fsBG0YjcOzwAHFscoDXg3EGlhupxjKRwrMe7Y2bX9VzTc-RY95A03bV1avKnjwJZjh0HKbGZDEa73mPU/s1600/telegram.png"
-                                                alt="" />
-                                        </div>
-                                        <div className="icon-block">
-                                            <Image src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiejpFbnjtnjhErKo-66_ATecAMmYtSrLzQYdIRMRAxLHtgMUZKnA6jGJQsTMnrniZmMhTZydWkR-l2cpZcGEBGlI4Ptl9ogR-NSPF2wNO5FQdMlL_xaGHQfPnSRIh0Lg4JX0PJLjg9p-tAL9Y8qFbbuGIW3YoolXiMja2qujyDjcFPYGzsPu-RyHle2Jc/s1600/youtube.png" alt="" />
-                                        </div>
-                                    </div>
-                                    <div className="images">
-                                        <Image src="./assets/dp.jpg" alt="" className="img-w" />
-                                    </div>
-                                </div>
-                            </div> */}
+                           
                             <div className="rightimg d-flex justify-content-center">
                                 <Image src="./assets/dp.jpeg" alt="" className="dpimg" />
                             </div>
@@ -292,16 +299,22 @@ export default function Portfolio() {
                                 <Row>
                                     {theme ? <>
                                         <div className="resumebtn">
-                                            <Button variant="outline-light" onClick={handleButtonClick} type="button" className="mt-4 rounded-5">
+                                            <a href="./assets/cv.pdf" target="_blank">
+                                            <Button variant="outline-light"  type="button" className="mt-4 rounded-5">
                                                 Get Resume
                                             </Button>
+
+                                            </a>
                                         </div>
                                     </>
                                         :
                                         <div className="resumebtn">
-                                            <Button variant="outline-dark" onClick={handleButtonClick} type="button" className="mt-4 rounded-5">
+                                             <a href="./assets/cv.pdf" target="_blank">
+                                            <Button variant="outline-dark"  type="button" className="mt-4 rounded-5">
                                                 Get Resume
                                             </Button>
+
+                                            </a>
                                         </div>
                                     }
                                 </Row>
@@ -325,17 +338,15 @@ export default function Portfolio() {
                                         Skilled in frontend and backend development, with a focus on user-friendly design.
                                         Eager to collaborate and learn within a development team.</p>
                                     <Row>
-                                        <Col lg={4}>
-                                            <span className="aboutcategoryhead" onClick={() => handleButtonabout(1)}>Skills</span>
+                                        <Col xs={4}>
+                                            <span className={`aboutcategoryhead ${button1Clicked && 'custom-underline'} `} onClick={() => handleButtonabout(1)}>Skills</span>
                                         </Col>
-                                        <Col lg={4}>
-                                            <span className="aboutcategoryhead" onClick={() => handleButtonabout(2)}>Experience</span>
+                                        <Col xs={4}>
+                                            <span className={`aboutcategoryhead ${button2Clicked && 'custom-underline'} `}  onClick={() => handleButtonabout(2)}>Experience</span>
                                         </Col>
-                                        <Col lg={4}>
-                                            <span className="aboutcategoryhead" onClick={() => handleButtonabout(3)}>Education</span>
+                                        <Col xs={4}>
+                                            <span className={`aboutcategoryhead ${button3Clicked && 'custom-underline'} `}  onClick={() => handleButtonabout(3)}>Education</span>
                                         </Col>
-
-
                                     </Row>
                                     <Row className="mt-4">
                                         {
@@ -387,7 +398,7 @@ export default function Portfolio() {
                                                             <span className="aboutrole">2018</span>
                                                         </Row>
                                                         <Row>
-                                                            <span className="aboutcontent">Boys High Secondary School, Punalur - Kollam, Kerala</span>
+                                                            <span className="aboutcontent text-start">Boys High Secondary School, Punalur - Kollam, Kerala</span>
                                                         </Row>
                                                     </div>
                                                 </Row>
@@ -397,7 +408,7 @@ export default function Portfolio() {
                                                             <span className="aboutrole">2018 - 2020</span>
                                                         </Row>
                                                         <Row>
-                                                            <span className="aboutcontent">Boys Higher Secondary School, Punalur - Kollam, Kerala</span>
+                                                            <span className="aboutcontent text-start">Boys Higher Secondary School, Punalur - Kollam, Kerala</span>
                                                         </Row>
                                                     </div>
                                                 </Row>
@@ -407,7 +418,7 @@ export default function Portfolio() {
                                                             <span className="aboutrole">2020 - 2023</span>
                                                         </Row>
                                                         <Row>
-                                                            <span className="aboutcontent">University Institute of Technology, Pathanapuram - Kollam, Kerala</span>
+                                                            <span className="aboutcontent text-start">University Institute of Technology, Pathanapuram - Kollam, Kerala</span>
                                                         </Row>
                                                     </div>
                                                 </Row>
@@ -417,21 +428,26 @@ export default function Portfolio() {
                                     </Row>
                                 </div>
                             </Col>
-                            <Col lg={5} className="d-none d-lg-block">
+                            <Col lg={5} className="d-none d-lg-block" >
                                 <>
-                                   <Container>
-                                   <div className="p-5 mt-lg-5 d-flex  justify-content-center align-items-center  ">
-                                        <Image src="./assets/dp.jpeg" height={500} alt="Aboutpic"></Image>
+                                   <Container  >
+                                   <div className="mt-lg-5 d-flex  justify-content-center align-items-center  ">
+                                    
+                                        <Image src="./assets/abut.jpg" className="aboutimg my-5" alt="Aboutpic"></Image>
                                     </div>
                                    </Container>
                                    </>
-
                             </Col>
-
                         </Row>
                     </Container>
                 </div>
                 {/* Section 2 Ended*/}
+
+                 {/* Section 3 Tech Stack*/}
+                 <div>
+
+                 </div>
+                   {/* Section 3 Ended*/}
             </div>
 
 
