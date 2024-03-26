@@ -62,15 +62,15 @@ export default function Portfolio() {
                     break;
             }
         };
-    
+
         clearTimeout(buttonClickTimeout);
-    
-       
+
+
         buttonClickTimeout = setTimeout(() => {
             updateStateWithDelay(buttonNumber);
-        }, 300); 
+        }, 300);
     };
-    
+
 
     useEffect(() => {
         console.log(theme);
@@ -194,7 +194,7 @@ export default function Portfolio() {
                 <Container id="Home" className="maincontainer" >
                     <Row>
                         <Col lg={5} md={6} sm={12} className="order-lg-2" >
-                           
+
                             <div className="rightimg d-flex justify-content-center">
                                 <Image src="./assets/dp.jpeg" alt="" className="dpimg" />
                             </div>
@@ -300,19 +300,19 @@ export default function Portfolio() {
                                     {theme ? <>
                                         <div className="resumebtn">
                                             <a href="./assets/cv.pdf" target="_blank">
-                                            <Button variant="outline-light"  type="button" className="mt-4 rounded-5">
-                                                Get Resume
-                                            </Button>
+                                                <Button variant="outline-light" type="button" className="mt-4 rounded-5">
+                                                    Get Resume
+                                                </Button>
 
                                             </a>
                                         </div>
                                     </>
                                         :
                                         <div className="resumebtn">
-                                             <a href="./assets/cv.pdf" target="_blank">
-                                            <Button variant="outline-dark"  type="button" className="mt-4 rounded-5">
-                                                Get Resume
-                                            </Button>
+                                            <a href="./assets/cv.pdf" target="_blank">
+                                                <Button variant="outline-dark" type="button" className="mt-4 rounded-5">
+                                                    Get Resume
+                                                </Button>
 
                                             </a>
                                         </div>
@@ -328,11 +328,12 @@ export default function Portfolio() {
                 {/* Section 2 - About */}
                 <div>
                     <Container id="About" className="mt-5" >
-                    {/* style={{ backgroundColor: '#da3cb7' }} */}
+                        {/* style={{ backgroundColor: '#da3cb7' }} */}
                         <Row>
                             <Col lg={7} className="order-lg-2">
                                 <div className="p-5 mt-lg-5 aboutdiv">
-                                    <h5 className="navheads text-secondary mb-3"><b><i>{'<--  Who am I  --/>'}</i></b></h5>
+                                    <span className="portfoliohead">ABOUT ME</span>
+                                    {/* <h5 className="navheads text-secondary mb-3"><b><i>{'<--  Who am I  --/>'}</i></b></h5> */}
                                     <p className="aboutpara">Experienced developer adept in Flutter and MERN stack technologies
                                         (Flutter, Firebase, MongoDB, Express.js, React.js, Node.js).
                                         Skilled in frontend and backend development, with a focus on user-friendly design.
@@ -342,10 +343,10 @@ export default function Portfolio() {
                                             <span className={`aboutcategoryhead ${button1Clicked && 'custom-underline'} `} onClick={() => handleButtonabout(1)}>Skills</span>
                                         </Col>
                                         <Col xs={4}>
-                                            <span className={`aboutcategoryhead ${button2Clicked && 'custom-underline'} `}  onClick={() => handleButtonabout(2)}>Experience</span>
+                                            <span className={`aboutcategoryhead ${button2Clicked && 'custom-underline'} `} onClick={() => handleButtonabout(2)}>Experience</span>
                                         </Col>
                                         <Col xs={4}>
-                                            <span className={`aboutcategoryhead ${button3Clicked && 'custom-underline'} `}  onClick={() => handleButtonabout(3)}>Education</span>
+                                            <span className={`aboutcategoryhead ${button3Clicked && 'custom-underline'} `} onClick={() => handleButtonabout(3)}>Education</span>
                                         </Col>
                                     </Row>
                                     <Row className="mt-4">
@@ -430,24 +431,105 @@ export default function Portfolio() {
                             </Col>
                             <Col lg={5} className="d-none d-lg-block" >
                                 <>
-                                   <Container  >
-                                   <div className="mt-lg-5 d-flex  justify-content-center align-items-center  ">
-                                    
-                                        <Image src="./assets/abut.jpg" className="aboutimg my-5" alt="Aboutpic"></Image>
-                                    </div>
-                                   </Container>
-                                   </>
+                                    <Container  >
+                                        <div className="mt-lg-5 d-flex  justify-content-center align-items-center  ">
+
+                                            <Image src="./assets/abut.jpg" className="aboutimg my-5" alt="Aboutpic"></Image>
+                                        </div>
+                                    </Container>
+                                </>
                             </Col>
                         </Row>
                     </Container>
                 </div>
                 {/* Section 2 Ended*/}
 
-                 {/* Section 3 Tech Stack*/}
-                 <div>
+                {/* Section 3 Tech Stack*/}
+                <div>
+                    <Container className="text-lg-center text-center mt-5 techcontainer">
+                        <div className="my-4 mx-lg-5 mx-2 ">
+                            <span className="portfoliohead">TECH STACK</span>
+                            <p className="techstackpara">These are the few Technologies , languages and frameworks that i grind on a regular basis...</p>
+                        </div>
+                        <Row className="p-3">
+                        
+                            <Col lg={2} className="techcard d-flex  justify-content-center mx-3" style={{width: '8rem', height:'8rem'}}>
+    <div style={{ width: '8rem', height: '8rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+            // className="px-6 py-3"
+            alt=""
+            style={{ maxWidth: '50%', maxHeight: '100%' }}
+        />
+    
+    </div>
+    
+</Col>
+                            <Col lg={2} className="techcard d-flex  justify-content-center mx-3" style={{width: '8rem', height:'8rem'}}>
+    <div style={{ width: '8rem', height: '8rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+            // className="px-6 py-3"
+            alt=""
+            style={{ maxWidth: '50%', maxHeight: '100%' }}
+        />
+    {/* <p className="techstacktext">Html</p> */}
+    </div>
+</Col>
+                            <Col lg={2} className="techcard d-flex  justify-content-center mx-3" style={{width: '8rem', height:'8rem'}}>
+    <div style={{ width: '8rem', height: '8rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Image
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            // className="px-6 py-3"
+            alt=""
+            style={{ maxWidth: '50%', maxHeight: '100%' }}
+        />
+    {/* <p className="techstacktext">Html</p> */}
+    </div>
+</Col>
+                            <Col lg={2} className="techcard d-flex  justify-content-center mx-3" style={{width: '8rem', height:'8rem'}}>
+    <div style={{ width: '8rem', height: '8rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Image
+            src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg"
+            // className="px-6 py-3"
+            alt=""
+            style={{ maxWidth: '50%', maxHeight: '100%' }}
+        />
+    {/* <p className="techstacktext">Html</p> */}
+    </div>
+</Col>
+                            <Col lg={2} className="techcard d-flex  justify-content-center mx-3" style={{width: '8rem', height:'8rem'}}>
+    <div style={{ width: '8rem', height: '8rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Image
+            src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg"
+            // className="px-6 py-3"
+            alt=""
+            style={{ maxWidth: '50%', maxHeight: '100%' }}
+        />
+    {/* <p className="techstacktext">Html</p> */}
+    </div>
+</Col>
 
-                 </div>
-                   {/* Section 3 Ended*/}
+                            <Col lg={2}>
+                                <h1>hi</h1>
+                            </Col>
+                            <Col lg={2}>
+                                <h1>hi</h1>
+                            </Col>
+                            <Col lg={2}>
+                                <h1>hi</h1>
+                            </Col>
+                            <Col lg={2}>
+                                <h1>hi</h1>
+                            </Col>
+                            <Col lg={2}>
+                                <h1>hi</h1>
+                            </Col>
+                        </Row>
+                    </Container>
+
+                </div>
+                {/* Section 3 Ended*/}
             </div>
 
 
