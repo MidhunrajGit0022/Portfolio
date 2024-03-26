@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Col, Container, Image, Nav, Navbar, Row } from 'react-bootstrap';
+import { Button, Col, Container, Figure, Image, Nav, Navbar, Row, ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 import {
     AiFillGithub,
     AiFillInstagram,
@@ -17,28 +17,14 @@ export default function Portfolio() {
     const [button1Clicked, setButton1Clicked] = useState(true);
     const [button2Clicked, setButton2Clicked] = useState(false);
     const [button3Clicked, setButton3Clicked] = useState(false);
+    // const [toggle, setToggle] = useState('all');
 
-    // const handleButtonabout = (buttonNumber) => {
-    //     switch (buttonNumber) {
-    //         case 1:
-    //             setButton1Clicked(true);
-    //             setButton2Clicked(false);
-    //             setButton3Clicked(false);
-    //             break;
-    //         case 2:
-    //             setButton1Clicked(false);
-    //             setButton2Clicked(true);
-    //             setButton3Clicked(false);
-    //             break;
-    //         case 3:
-    //             setButton1Clicked(false);
-    //             setButton2Clicked(false);
-    //             setButton3Clicked(true);
-    //             break;
-    //         default:
-    //             break;
-    //     }
+    // const handleClick = (value) => {
+    //   if (value !== toggle) {
+    //     setToggle(value);
+    //   }
     // };
+
     let buttonClickTimeout;
     const handleButtonabout = (buttonNumber) => {
         const updateStateWithDelay = (buttonNumberToUpdate) => {
@@ -384,7 +370,7 @@ export default function Portfolio() {
                                                             <span className="aboutrole">2023 - Current</span>
                                                         </Row>
                                                         <Row>
-                                                            <span className="aboutcontent">Softzane Solutions</span>
+                                                            <span className="aboutcontent">Softzane Solutions, Ayoor</span>
                                                         </Row>
                                                     </div>
                                                 </Row>
@@ -449,87 +435,374 @@ export default function Portfolio() {
                     <Container className="text-lg-center text-center mt-5 techcontainer">
                         <div className="my-4 mx-lg-5 mx-2 ">
                             <span className="portfoliohead">TECH STACK</span>
-                            <p className="techstackpara">These are the few Technologies , languages and frameworks that i grind on a regular basis...</p>
+                            <p className="techstackpara mt-lg-1">These are the few Technologies , languages and frameworks that i grind on a regular basis...</p>
                         </div>
-                        <Row className="p-3">
-                        
-                            <Col lg={2} className="techcard d-flex  justify-content-center mx-3" style={{width: '8rem', height:'8rem'}}>
-    <div style={{ width: '8rem', height: '8rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Image
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-            // className="px-6 py-3"
-            alt=""
-            style={{ maxWidth: '50%', maxHeight: '100%' }}
-        />
-    
-    </div>
-    
-</Col>
-                            <Col lg={2} className="techcard d-flex  justify-content-center mx-3" style={{width: '8rem', height:'8rem'}}>
-    <div style={{ width: '8rem', height: '8rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Image
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-            // className="px-6 py-3"
-            alt=""
-            style={{ maxWidth: '50%', maxHeight: '100%' }}
-        />
-    {/* <p className="techstacktext">Html</p> */}
-    </div>
-</Col>
-                            <Col lg={2} className="techcard d-flex  justify-content-center mx-3" style={{width: '8rem', height:'8rem'}}>
-    <div style={{ width: '8rem', height: '8rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Image
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-            // className="px-6 py-3"
-            alt=""
-            style={{ maxWidth: '50%', maxHeight: '100%' }}
-        />
-    {/* <p className="techstacktext">Html</p> */}
-    </div>
-</Col>
-                            <Col lg={2} className="techcard d-flex  justify-content-center mx-3" style={{width: '8rem', height:'8rem'}}>
-    <div style={{ width: '8rem', height: '8rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Image
-            src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg"
-            // className="px-6 py-3"
-            alt=""
-            style={{ maxWidth: '50%', maxHeight: '100%' }}
-        />
-    {/* <p className="techstacktext">Html</p> */}
-    </div>
-</Col>
-                            <Col lg={2} className="techcard d-flex  justify-content-center mx-3" style={{width: '8rem', height:'8rem'}}>
-    <div style={{ width: '8rem', height: '8rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Image
-            src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg"
-            // className="px-6 py-3"
-            alt=""
-            style={{ maxWidth: '50%', maxHeight: '100%' }}
-        />
-    {/* <p className="techstacktext">Html</p> */}
-    </div>
-</Col>
-
-                            <Col lg={2}>
-                                <h1>hi</h1>
+                        <Row className="mx-auto p-lg-3 mx-lg-3 py-1">
+                            <Col lg={2} md={3} sm={4} xs={6} >
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">Html</div>
+                                </div>
                             </Col>
-                            <Col lg={2}>
-                                <h1>hi</h1>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">CSS 3</div>
+                                </div>
                             </Col>
-                            <Col lg={2}>
-                                <h1>hi</h1>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">JS</div>
+                                </div>
                             </Col>
-                            <Col lg={2}>
-                                <h1>hi</h1>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">Flutter</div>
+                                </div>
                             </Col>
-                            <Col lg={2}>
-                                <h1>hi</h1>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">Dart</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">MongoDb</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://skillicons.dev/icons?i=express"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">Express.js</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">React.js</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">Node.js</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://cdn.simpleicons.org/redux/764ABC"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">Redux</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">Firebase</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">Git</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://skillicons.dev/icons?i=github"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">GitHub</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">Bootstrap</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://react-bootstrap.netlify.app/img/logo.svg"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">React Bootstrap</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://jwt.io/img/pic_logo.svg"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">JWT</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://cdn.simpleicons.org/php/777BB4"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">Php</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">MySql</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">CodeIgniter</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">NPM</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6}>
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://cdn.simpleicons.org/postman/FF6C37"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">Postman</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6} className="rounded-5">
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="./assets/api.png"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4 rounded-5"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">API</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6} className="rounded-5">
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="./assets/Tailwind.webp"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-5 p-4 rounded-5"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">Tailwind</div>
+                                </div>
+                            </Col>
+                            <Col lg={2} md={3} sm={4} xs={6} className="rounded-5">
+                                <div className="stackcontent mt-3">
+                                    <picture>
+                                        <img
+                                            src="https://w7.pngwing.com/pngs/761/513/png-transparent-material-ui-logo.png"
+                                            alt="React"
+                                            width="100"
+                                            height="100"
+                                            className="w-auto p-4 rounded-5"
+                                        />
+                                    </picture>
+                                    <div className="text-center mb-2 text-sm md:text-md">Material UI</div>
+                                </div>
                             </Col>
                         </Row>
                     </Container>
-
                 </div>
                 {/* Section 3 Ended*/}
+
+                {/* Section 4 Projects*/}
+                <div>
+                    <Container id="Projects" className="text-lg-center text-center mt-5 techcontainer">
+                        <div className="my-4 mx-lg-5 mx-2 ">
+                            <span className="portfoliohead">PROJECTS</span>
+                            <p className="techstackpara mt-lg-1">I have worked on a wide range of projects. From web apps to mobile apps. Here are some of my projects.</p>
+                        </div>
+                        <div>
+                        {/* <ToggleButtonGroup type="radio" name="toggleOptions" value={toggle} onChange={handleClick}>
+        <ToggleButton value="all">All</ToggleButton>
+        <ToggleButton value="web app">WEB APP'S</ToggleButton>
+        <ToggleButton value="android app">ANDROID APP'S</ToggleButton>
+      </ToggleButtonGroup>
+
+      {toggle === "all" && <h1>hai</h1>}
+      {toggle === "web app" && <h2>nsdjnd</h2>}
+      {toggle === "android app" && <h3>feefn</h3>} */}
+                        </div>
+                    </Container>
+                </div>
+
+                {/* Section 4 Ended*/}
+
+
             </div>
 
 

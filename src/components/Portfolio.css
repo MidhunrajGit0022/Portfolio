@@ -14,6 +14,7 @@
     --iconcolor:#E3E3E3;
     --sectionhead:blue;
     --imgshadow:rgba(227, 229, 230, 0.503);
+    --stackborder:#1480fb49;
 }
 .darkTheme{
     --bg:#242526;
@@ -27,7 +28,8 @@
     --gradient2:#33e1ff;
     --gradient3:#c7009b;
     --iconcolor:#1C1E21; 
-    --sectionhead:#F0DB4F;  
+    --sectionhead:#F0DB4F; 
+    --stackborder:#e3e3e329; 
 }
 
 
@@ -448,16 +450,25 @@ transition-duration: 0.8s;
   font-family: "Rubik Scribble", system-ui;
 }
 
+
 .techstackpara{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1.0rem;
   color: var(--textcolor);
 }
 
-.techcard {
-  background-color: transparent;
-  border: 1px solid #ccc; 
-  border-radius: 10%;
+
+.stackcontent{
+  display: block;
+  border-radius: 1rem;
+  border: 1px solid;
+  border-color: var(--stackborder);
+  cursor: pointer;
 }
 
+.stackcontent:hover{
+  box-shadow: 0 0 0.75rem 0.25rem rgba(20, 126, 251, 0.2);
+  border-color: var(--stackborder);
+  transition: all 0.3s ease;
+}
 
