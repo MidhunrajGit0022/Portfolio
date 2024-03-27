@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Button, Col, Container, Figure, Image, Nav, Navbar, Row, ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
+import { Button, Col, Container, Image, Nav, Navbar, Row, ToggleButton, ButtonGroup } from 'react-bootstrap';
+import '../components/Portfolio.css';
+import { projects } from "../data/constants";
 import {
     AiFillGithub,
     AiFillInstagram,
@@ -7,23 +9,19 @@ import {
     AiFillMail,
     AiOutlineTwitter
 } from "react-icons/ai";
-import '../components/Portfolio.css';
 
-
-export default function Portfolio() {
+export default function Portfolio({ openModal, setOpenModal }) {
     const [theme, settheme] = useState(false)
     const [scrolled, setScrolled] = useState(false);
     const [part, setPart] = useState('');
     const [button1Clicked, setButton1Clicked] = useState(true);
     const [button2Clicked, setButton2Clicked] = useState(false);
     const [button3Clicked, setButton3Clicked] = useState(false);
-    // const [toggle, setToggle] = useState('all');
+    const [toggle, setToggle] = useState('all');
 
-    // const handleClick = (value) => {
-    //   if (value !== toggle) {
-    //     setToggle(value);
-    //   }
-    // };
+    const handleToggle = (value) => {
+        setToggle(value);
+    };
 
     let buttonClickTimeout;
     const handleButtonabout = (buttonNumber) => {
@@ -76,14 +74,7 @@ export default function Portfolio() {
         };
     }, []);
 
-    // function handleButtonClick() {
-    //     const link = document.createElement('a');
-    //     link.href = './assets/cv.pdf';
-    //     link.target = '_blank';
-    //     link.rel = 'noopener noreferrer';
-    //     link.download = 'cv.pdf';
-    //     link.click();
-    // }
+
 
     const words = [
         'Flutter Developer',
@@ -148,10 +139,8 @@ export default function Portfolio() {
         <>
             <div className="bgimg">
                 {/* Navbar Start*/}
-                {/* <Navbar expand="lg" bg="navbarbg fixed-top" className={scrolled ? 'd-none' : ''}> */}
                 <Navbar expand="lg" className="navbarbg fixed-top " >
                     <Container>
-                        {/* <Navbar.Brand className='d-flex'><span className="devname d-flex">Midhun.Dev&copy;</span></Navbar.Brand> */}
                         <Navbar.Brand className='d-flex'>
                             <span className="devname d-flex" style={{ verticalAlign: 'top' }}>Midhun.dev<span style={{ fontSize: '80%' }} className="ms-1"> &copy;</span></span>
                         </Navbar.Brand>
@@ -670,7 +659,7 @@ export default function Portfolio() {
                                             alt="React"
                                             width="100"
                                             height="100"
-                                            className="w-auto p-4"
+                                            className="w-auto p-3"
                                         />
                                     </picture>
                                     <div className="text-center mb-2 text-sm md:text-md">Php</div>
@@ -780,22 +769,67 @@ export default function Portfolio() {
                 {/* Section 3 Ended*/}
 
                 {/* Section 4 Projects*/}
-                <div>
-                    <Container id="Projects" className="text-lg-center text-center mt-5 techcontainer">
+                <div id="Projects">
+                    <Container className="text-lg-center text-center mt-5 techcontainer">
                         <div className="my-4 mx-lg-5 mx-2 ">
                             <span className="portfoliohead">PROJECTS</span>
                             <p className="techstackpara mt-lg-1">I have worked on a wide range of projects. From web apps to mobile apps. Here are some of my projects.</p>
                         </div>
                         <div>
-                        {/* <ToggleButtonGroup type="radio" name="toggleOptions" value={toggle} onChange={handleClick}>
-        <ToggleButton value="all">All</ToggleButton>
-        <ToggleButton value="web app">WEB APP'S</ToggleButton>
-        <ToggleButton value="android app">ANDROID APP'S</ToggleButton>
-      </ToggleButtonGroup>
+                            <ButtonGroup toggle>
+                                <ToggleButton
+                                    type="radio"
+                                    name="options"
+                                    value="all"
+                                    variant="secondary"
+                                    checked={toggle === 'all'}
+                                    onChange={() => handleToggle('all')}
+                                >
+                                    All
+                                </ToggleButton>
+                                <ToggleButton
+                                    type="radio"
+                                    name="options"
+                                    value="web app"
+                                    variant="secondary"
+                                    checked={toggle === 'web app'}
+                                    onChange={() => handleToggle('web app')}
+                                >
+                                    WEB APP'S
+                                </ToggleButton>
+                                <ToggleButton
+                                    type="radio"
+                                    name="options"
+                                    value="android app"
+                                    variant="secondary"
+                                    checked={toggle === 'android app'}
+                                    onChange={() => handleToggle('android app')}
+                                >
+                                    ANDROID APP'S
+                                </ToggleButton>
+                            </ButtonGroup>
 
-      {toggle === "all" && <h1>hai</h1>}
-      {toggle === "web app" && <h2>nsdjnd</h2>}
-      {toggle === "android app" && <h3>feefn</h3>} */}
+                            <Container className="p-5">
+                                <Row>
+                                    <Col lg={4} className="mt-3">
+                                        {toggle === 'all' && projects.map((project, index) => (
+                                            <div className="Cardproject p-4" key={index}>
+                                                <img className="projectimg" src={project.image} alt="Project" />
+                                                <div className="projecttags mt-3">
+                                            {project.tags?.map((tag, index) => (
+                                                <span className="projecttag" key={index}>{tag}</span>
+                                            ))}
+                                        </div>
+                                        <div className="ProjectDetails">
+                                            <div className="Projecttitle">{project.title}</div>
+                                            <div className="Projectdate">{project.date}</div>
+                                            <div className="Projectdescription mt-2">{project.description}</div>
+                                        </div>
+                                            </div>
+                                        ))}
+                                    </Col>
+                                </Row>
+                            </Container>
                         </div>
                     </Container>
                 </div>
