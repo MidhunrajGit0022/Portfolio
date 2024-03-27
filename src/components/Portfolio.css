@@ -29,7 +29,7 @@
     --gradient3:#c7009b;
     --iconcolor:#1C1E21; 
     --sectionhead:#F0DB4F; 
-    --stackborder:#e3e3e329; 
+    --stackborder:#1480fb27; 
 }
 
 
@@ -464,10 +464,12 @@ transition-duration: 0.8s;
   border: 1px solid;
   border-color: var(--stackborder);
   cursor: pointer;
+  box-shadow: 0 0 0.30rem 0.05rem rgba(20, 128, 251, 0.049);
+  
 }
 
 .stackcontent:hover{
-  box-shadow: 0 0 0.75rem 0.25rem rgba(20, 126, 251, 0.2);
+  box-shadow: 0 0 0.70rem 0.20rem rgba(20, 126, 251, 0.2);
   border-color: var(--stackborder);
   transition: all 0.3s ease;
 }
