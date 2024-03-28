@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Button, Col, Container, Image, Nav, Navbar, Row, ToggleButton, ButtonGroup } from 'react-bootstrap';
+import { Button, Col, Container, Image, Nav, Navbar, Row, ToggleButton, ButtonGroup, Modal } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { CgWebsite } from "react-icons/cg";
+import { BsGithub } from "react-icons/bs";
 import '../components/Portfolio.css';
 import ScrollToTop from "react-scroll-to-top";
 import { projects } from "../data/constants";
@@ -13,7 +15,7 @@ import {
     AiOutlineTwitter
 } from "react-icons/ai";
 
-export default function Portfolio({ openModal, setOpenModal }) {
+export default function Portfolio() {
     const [theme, settheme] = useState(false)
     const [scrolled, setScrolled] = useState(false);
     const [part, setPart] = useState('');
@@ -21,6 +23,16 @@ export default function Portfolio({ openModal, setOpenModal }) {
     const [button2Clicked, setButton2Clicked] = useState(false);
     const [button3Clicked, setButton3Clicked] = useState(false);
     const [toggle, setToggle] = useState('all');
+    const [selectedProject, setSelectedProject] = useState(null);
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
+    const openModal = (project) => {
+        setSelectedProject(project);
+        handleShow();
+    };
 
     const handleCategoryClick = (category) => {
         setToggle(category);
@@ -437,7 +449,7 @@ export default function Portfolio({ openModal, setOpenModal }) {
                     <Container className="text-lg-center text-center mt-5 techcontainer">
                         <div className="my-4 mx-lg-5 mx-2 ">
                             <span className="portfoliohead">TECH STACK</span>
-                            <p className="techstackpara mt-lg-1">These are the few Technologies , languages and frameworks that i grind on a regular basis...</p>
+                            <p className="techstackpara mt-lg-1">These are the few Technologies, languages and frameworks that i grind on a regular basis...</p>
                         </div>
                         <Row className="mx-auto p-lg-3 mx-lg-3 py-1">
                             <Col lg={2} md={3} sm={4} xs={6} >
@@ -791,16 +803,16 @@ export default function Portfolio({ openModal, setOpenModal }) {
                         <div>
                             {theme ? <>
                                 <ButtonGroup>
-                                    <Button className={`rounded-left ${toggle === 'all' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('all')}>All</Button>
-                                    <Button className={`${toggle === 'web app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('web app')}>Web App</Button>
-                                    <Button className={`rounded-right ${toggle === 'android app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('android app')}>Android App</Button>
+                                    <Button className={`rounded-left-right ${toggle === 'all' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('all')}>ALL</Button>
+                                    <Button className={`rounded-left-right ${toggle === 'web app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('web app')}>WEB APP'S</Button>
+                                    <Button className={`rounded-left-right ${toggle === 'android app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('android app')}>ANDROID APP'S</Button>
                                 </ButtonGroup>
                             </>
                                 :
                                 <ButtonGroup>
-                                    <Button className={`rounded-left-right ${toggle === 'all' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('all')}>All</Button>
-                                    <Button className={`rounded-left-right ${toggle === 'web app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('web app')}>Web App</Button>
-                                    <Button className={`rounded-left-right ${toggle === 'android app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('android app')}>Android App</Button>
+                                    <Button className={`rounded-left-right ${toggle === 'all' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('all')}>ALL</Button>
+                                    <Button className={`rounded-left-right ${toggle === 'web app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('web app')}>WEB APP'S</Button>
+                                    <Button className={`rounded-left-right ${toggle === 'android app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('android app')}>ANDROID APP'S</Button>
                                 </ButtonGroup>
                             }
                         </div>
@@ -810,15 +822,15 @@ export default function Portfolio({ openModal, setOpenModal }) {
                                     {projects
                                         .filter(project => toggle === 'all' || project.category === toggle)
                                         .map((project, index) => (
-                                            <Col lg={4} className="mt-3" key={index}>
-                                                <div className="Cardproject p-4">
+                                            <Col lg={4} md={6} sm={12} className="mt-3" key={index}>
+                                                <div className="Cardproject p-4" onClick={() => openModal(project)}>
                                                     <img className="projectimg img-fluid" src={project.image} alt="Project" />
                                                     <div className="projecttags mt-3">
                                                         {project.tags?.map((tag, index) => (
                                                             <span className="projecttag" key={index}>{tag}</span>
                                                         ))}
                                                     </div>
-                                                    <div className="ProjectDetails">
+                                                    <div className="ProjectDetails mt-lg-2">
                                                         <div className="Projecttitle">{project.title}</div>
                                                         <div className="Projectdate">{project.date}</div>
                                                         <div className="Projectdescription mt-2">{project.description}</div>
@@ -827,18 +839,70 @@ export default function Portfolio({ openModal, setOpenModal }) {
                                             </Col>
                                         ))}
                                 </Row>
+                                <Modal show={show} onHide={handleClose} style={{ cursor: "pointer" }}>
+                                    <Modal.Header closeButton className="modalbg"></Modal.Header>
+                                    <Modal.Body className="modalbg">
+                                        {selectedProject && (
+                                            <>
+                                                <img src={selectedProject.image} className="modalimage" alt="Project Image" />
+                                                <div className="ProjectDetails mt-lg-2">
+                                                    <div className="modaltitle">{selectedProject.title}</div>
+                                                    <div className="modaldate">{selectedProject.date}</div>
+                                                    <div className="modaltags mt-3">
+                                                        {selectedProject.tags?.map((tag, index) => (
+                                                            <span className="modaltag" key={index}>{tag}</span>
+                                                        ))}
+                                                    </div>
+                                                    <div className="modaldescription mt-2">{selectedProject.description}</div>
+                                                </div>
+                                            </>
+                                        )}
+                                    </Modal.Body>
+                                    <div className="modalbg rounded-bottom-3">
+                                        <Modal.Footer className="modalbtngroup">
+                                            
+                                            {theme ? <>
+                                                <Button variant="outline-light" href={selectedProject?.github} target="_blank" rel="noopener noreferrer">
+                                                <BsGithub /> &nbsp;
+                                                GitHub
+                                            </Button>
+                                            <Button
+                                                variant="outline-light"
+                                                href={selectedProject?.webapp}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <CgWebsite /> &nbsp;
+                                                Demo
+                                            </Button>
+                                    </>
+                                        :
+                                        <>
+                                        <Button variant="outline-dark" href={selectedProject?.github} target="_blank" rel="noopener noreferrer">
+                                        <BsGithub /> &nbsp;
+                                        GitHub
+                                    </Button>
+                                    <Button
+                                        variant="outline-dark"
+                                        href={selectedProject?.webapp}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <CgWebsite /> &nbsp;
+                                        Demo
+                                    </Button>
+                                        </>
+                                        
+                                    }
+                                        </Modal.Footer>
+                                    </div>
+                                </Modal>
                             </Container>
                         </div>
                     </Container>
                 </div>
-
                 {/* Section 4 Ended*/}
-
-
             </div>
-
-
-
         </>
     )
 }

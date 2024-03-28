@@ -15,6 +15,7 @@ export const projects = [
       ],
       category: "web app",
       github: "https://github.com/MidhunrajGit0022",
+      webapp: "www.google.com",
 
     },
     {
@@ -33,6 +34,7 @@ export const projects = [
       ],
       category: "android app",
       github: "https://github.com/MidhunrajGit0022",
+      webapp: "www.google.com",
     },
     {
       id: 3,
@@ -50,5 +52,7 @@ export const projects = [
       ],
       category: "android app",
       github: "https://github.com/MidhunrajGit0022",
+      webapp: "www.google.com",
     },
+   
 ]
