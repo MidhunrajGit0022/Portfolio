@@ -15,6 +15,40 @@ export const projects = [
       ],
       category: "web app",
       github: "https://github.com/MidhunrajGit0022",
-      // webapp: "https://trackify.duckdns.org",
+
+    },
+    {
+      id: 2,
+      title: "Civil android",
+      date: "Oct 2022 - April 2023",
+      description:
+        "Generates the Documents, Cards, Certificates. The primary objective of this Website is to give awareness about the government or legal documents and its registration details as well as to help to register or apply for those documents.",
+      image:
+        "../assets/pro1.png",
+      tags: [
+        "Html",
+        "CSS",
+        "CodeIgniter",
+        "MySql",
+      ],
+      category: "android app",
+      github: "https://github.com/MidhunrajGit0022",
+    },
+    {
+      id: 3,
+      title: "Civil android",
+      date: "Oct 2022 - April 2023",
+      description:
+        "Generates the Documents, Cards, Certificates. The primary objective of this Website is to give awareness about the government or legal documents and its registration details as well as to help to register or apply for those documents.",
+      image:
+        "../assets/pro1.png",
+      tags: [
+        "Html",
+        "CSS",
+        "CodeIgniter",
+        "MySql",
+      ],
+      category: "android app",
+      github: "https://github.com/MidhunrajGit0022",
     },
 ]

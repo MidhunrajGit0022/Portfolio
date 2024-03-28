@@ -17,6 +17,8 @@
   --tw-shadow: 0 8px 15px -12px rgba(20, 126, 251, 0.522), 0 6px 8px -6px rgba(0, 0, 0, 0.1);
   --stackbackground : transparent;
   --projectcardbackground : #F2F4F5;
+  --projectcardborder: #1c1e2144;
+  --scrolltotoproot:#147efb;
 
 }
 
@@ -37,6 +39,8 @@
   --tw-shadow: 0 5px 15px -12px rgba(20, 126, 251, 0.522), 0 6px 8px -6px rgba(0, 0, 0, 0.1);
   --stackbackground : #0E0E0E;
   --projectcardbackground : #181822d7;
+  --projectcardborder: #e3e3e33b;
+  --scrolltotoproot:#1480fb8f;
 }
 
 
@@ -524,7 +528,7 @@
   background-color: var(--projectcardbackground); 
   cursor: pointer;
   border: 0.5px solid ;
-  border-color: var(--stackborder);
+  border-color: var(--projectcardborder);
   border-radius: 10px;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #da0b0b00), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   transition: all 0.3s ease;
@@ -561,6 +565,7 @@
   background-color: rgba(0, 102, 255, 0.132); 
   padding: 2px 8px;
   border-radius: 10px;
+  
 }
 
 
@@ -571,7 +576,7 @@
 }
 
 .Projecttitle {
-  font-size: 20px;
+  font-size: 1.3rem;
   font-weight: 500;
   color:  var(--textcolor); 
   overflow: hidden;
@@ -591,6 +596,7 @@
 }
 
 .Projectdescription {
+  font-size: 0.9rem;
   font-weight: 400;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: var(--textcolor); 
@@ -621,6 +627,8 @@
   .projecttag {
     font-size: 10px; 
     padding: 2px 6px; 
+    display: flex;
+    justify-content: center;
   }
 
   .ProjectDetails {
@@ -636,7 +644,8 @@
   }
 
   .Projectdescription {
-    -webkit-line-clamp: 2; 
+    -webkit-line-clamp: 3; 
+    font-size: 0.6rem;
   }
 }
 /* ProjectCards.css Ended */
@@ -645,6 +654,78 @@
 
 
 
+/* styles.css */
+
+/* 
+.custom-scroll-to-top {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  background-color: #ffffff; 
+  border: none;
+  border-radius: 50%; 
+  width: 50px; 
+  height: 50px; 
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.custom-scroll-to-top svg {
+  width: 70%;
+  height: 70%; 
+  fill: #ff4800;
+}
 
 
+.custom-scroll-to-top:hover {
+  background-color: #f0f0f0; 
+} */
+
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.custom-scroll-to-top {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  border: none;
+  border-radius: 50%; 
+  width: 50px; 
+  height: 50px; 
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); 
+  animation: bounce 2s infinite, fadeInRight 0.5s ease-in-out;
+}
+
+#root .custom-scroll-to-top {
+  background-color: var(--scrolltotoproot) !important;
+}
+
+
+.custom-scroll-to-top svg {
+  width: 70%;
+  height: 70%; 
+  fill: #fff;
+}
 

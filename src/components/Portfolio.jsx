@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Image, Nav, Navbar, Row, ToggleButton, ButtonGroup } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import '../components/Portfolio.css';
+import ScrollToTop from "react-scroll-to-top";
 import { projects } from "../data/constants";
 import {
     AiFillGithub,
@@ -19,8 +22,8 @@ export default function Portfolio({ openModal, setOpenModal }) {
     const [button3Clicked, setButton3Clicked] = useState(false);
     const [toggle, setToggle] = useState('all');
 
-    const handleToggle = (value) => {
-        setToggle(value);
+    const handleCategoryClick = (category) => {
+        setToggle(category);
     };
 
     let buttonClickTimeout;
@@ -138,6 +141,16 @@ export default function Portfolio({ openModal, setOpenModal }) {
     return (
         <>
             <div className="bgimg">
+                <ScrollToTop
+                    smooth={true}
+                    top={100}
+                    svgPath="M128 8l-96 96h64v112h64v-112h64l-96-96z"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 256 256"
+                    style={{ borderRadius: "50%" }}
+                    className="custom-scroll-to-top animate__animated animate__bounce animate__delay-0.5s animate__fadeInRight"
+                />
                 {/* Navbar Start*/}
                 <Navbar expand="lg" className="navbarbg fixed-top " >
                     <Container>
@@ -771,63 +784,48 @@ export default function Portfolio({ openModal, setOpenModal }) {
                 {/* Section 4 Projects*/}
                 <div id="Projects">
                     <Container className="text-lg-center text-center mt-5 techcontainer">
-                        <div className="my-4 mx-lg-5 mx-2 ">
+                        <div className="my-4 mx-lg-5 mx-2">
                             <span className="portfoliohead">PROJECTS</span>
                             <p className="techstackpara mt-lg-1">I have worked on a wide range of projects. From web apps to mobile apps. Here are some of my projects.</p>
                         </div>
                         <div>
-                            <ButtonGroup toggle>
-                                <ToggleButton
-                                    type="radio"
-                                    name="options"
-                                    value="all"
-                                    variant="secondary"
-                                    checked={toggle === 'all'}
-                                    onChange={() => handleToggle('all')}
-                                >
-                                    All
-                                </ToggleButton>
-                                <ToggleButton
-                                    type="radio"
-                                    name="options"
-                                    value="web app"
-                                    variant="secondary"
-                                    checked={toggle === 'web app'}
-                                    onChange={() => handleToggle('web app')}
-                                >
-                                    WEB APP'S
-                                </ToggleButton>
-                                <ToggleButton
-                                    type="radio"
-                                    name="options"
-                                    value="android app"
-                                    variant="secondary"
-                                    checked={toggle === 'android app'}
-                                    onChange={() => handleToggle('android app')}
-                                >
-                                    ANDROID APP'S
-                                </ToggleButton>
-                            </ButtonGroup>
-
+                            {theme ? <>
+                                <ButtonGroup>
+                                    <Button className={`rounded-left ${toggle === 'all' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('all')}>All</Button>
+                                    <Button className={`${toggle === 'web app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('web app')}>Web App</Button>
+                                    <Button className={`rounded-right ${toggle === 'android app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('android app')}>Android App</Button>
+                                </ButtonGroup>
+                            </>
+                                :
+                                <ButtonGroup>
+                                    <Button className={`rounded-left-right ${toggle === 'all' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('all')}>All</Button>
+                                    <Button className={`rounded-left-right ${toggle === 'web app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('web app')}>Web App</Button>
+                                    <Button className={`rounded-left-right ${toggle === 'android app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('android app')}>Android App</Button>
+                                </ButtonGroup>
+                            }
+                        </div>
+                        <div>
                             <Container className="p-5">
                                 <Row>
-                                    <Col lg={4} className="mt-3">
-                                        {toggle === 'all' && projects.map((project, index) => (
-                                            <div className="Cardproject p-4" key={index}>
-                                                <img className="projectimg" src={project.image} alt="Project" />
-                                                <div className="projecttags mt-3">
-                                            {project.tags?.map((tag, index) => (
-                                                <span className="projecttag" key={index}>{tag}</span>
-                                            ))}
-                                        </div>
-                                        <div className="ProjectDetails">
-                                            <div className="Projecttitle">{project.title}</div>
-                                            <div className="Projectdate">{project.date}</div>
-                                            <div className="Projectdescription mt-2">{project.description}</div>
-                                        </div>
-                                            </div>
+                                    {projects
+                                        .filter(project => toggle === 'all' || project.category === toggle)
+                                        .map((project, index) => (
+                                            <Col lg={4} className="mt-3" key={index}>
+                                                <div className="Cardproject p-4">
+                                                    <img className="projectimg img-fluid" src={project.image} alt="Project" />
+                                                    <div className="projecttags mt-3">
+                                                        {project.tags?.map((tag, index) => (
+                                                            <span className="projecttag" key={index}>{tag}</span>
+                                                        ))}
+                                                    </div>
+                                                    <div className="ProjectDetails">
+                                                        <div className="Projecttitle">{project.title}</div>
+                                                        <div className="Projectdate">{project.date}</div>
+                                                        <div className="Projectdescription mt-2">{project.description}</div>
+                                                    </div>
+                                                </div>
+                                            </Col>
                                         ))}
-                                    </Col>
                                 </Row>
                             </Container>
                         </div>
