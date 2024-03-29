@@ -19,12 +19,31 @@ export const projects = [
     },
     {
       id: 2,
+      title: "Blood Donation App",
+      // date: "Oct 2022 - April 2023",
+      description:
+        "Created a Flutter-based blood donation app featuring comprehensive CRUD operations. Users can effortlessly Create, Read, Update, and Delete donor profiles,. The app streamlines blood donation management, enhancing accessibility and efficiency in the process.",
+      image:
+        "../assets/bloodapp.png",
+      tags: [
+        "Flutter",
+        "Dart",
+        "Firebase",
+        
+      ],
+      category: "android app",
+      github: "https://github.com/MidhunrajGit0022/Blood_Donation_App_CRUD",
+      role: "Flutter (Crud App)"
+      // webapp: "www.google.com",
+    },
+    {
+      id: 3,
       title: "AddressBuk",
       date: "Jan 2023 - Current",
       description:
         "Developed live Flutter project with Firebase integration for efficient shop discovery. Features Admin, Staff, and Public roles. Admins manage staff and shops; Staff update shop details. Public users search nearby shops, rate, and provide feedback. This project is live and showcases my skills in Flutter and Firebase.",
       image:
-        "../assets/blank.png",
+        "../assets/underconstruction.png",
       tags: [
         "Flutter",
         "Dart",
@@ -36,22 +55,60 @@ export const projects = [
       // webapp: "www.google.com",
     },
     {
-      id: 3,
-      title: "Blood Donation App",
-      // date: "Oct 2022 - April 2023",
+      id: 4,
+      title: "Webhost",
+      date: "Sep 2023 - Oct 2023",
       description:
-        "Created a Flutter-based blood donation app featuring comprehensive CRUD operations. Users can effortlessly Create, Read, Update, and Delete donor profiles,. The app streamlines blood donation management, enhancing accessibility and efficiency in the process.",
+        "Webhost is a React-based UI project designed to showcase frontend skills. With its modern design and user-friendly approach, Webhost offers a seamless and engaging experience for users exploring webhosting platform.",
       image:
-        "../assets/bloodapp.png",
+        "../assets/webhost_react.png",
       tags: [
-        "Flutter",
-        "Dart",
-        
+        "React",
+        "React-Bootstrap",
+        "CSS",
       ],
-      category: "android app",
-      github: "https://github.com/MidhunrajGit0022/Blood_Donation_App_CRUD",
-      role: "Flutter (Crud APP)"
-      // webapp: "www.google.com",
+      category: "web app",
+      github: "https://github.com/MidhunrajGit0022/Webhost_Clone_Webpage",
+      role: "Front-end Development",
+      webapp: "https://midhunrajgit0022.github.io/Webhost_Clone_Webpage/",
     },
+    {
+      id: 4,
+      title: "Streamo",
+      date: "Aug 2023 - Sep 2023",
+      description:
+        "Streamo is an HTML, CSS, and JavaScript-based Clone UI project designed to showcase frontend skills. With its modern design and user-friendly approach, Streamo offers a seamless and engaging experience for users exploring the platform.",
+      image:
+        "../assets/streamo.png",
+      tags: [
+        "Html",
+        "CSS",
+        "Javascript"
+      ],
+      category: "web app",
+      github: "https://github.com/MidhunrajGit0022/Streamo_Clone_Webpage",
+      role: "Front-end Development",
+      webapp: "https://midhunrajgit0022.github.io/Streamo_Clone_Webpage/",
+    },
+    // {
+    //   id: 5,
+    //   title: "video",
+    //   date: "Aug 2023 - Sep 2023",
+    //   description:
+    //     "video is an HTML, CSS, and JavaScript-based Clone UI project designed to showcase frontend skills. With its modern design and user-friendly approach, Streamo offers a seamless and engaging experience for users exploring the platform.",
+    //     image:
+    //     "../assets/streamo.png",
+    //     // video:
+    //     // "../assets/aa.mp4",
+    //   tags: [
+    //     "Html",
+    //     "CSS",
+    //     "Javascript"
+    //   ],
+    //   category: "web app",
+    //   github: "https://github.com/MidhunrajGit0022/Streamo_Clone_Webpage",
+    //   role: "Front-end Development",
+    //   webapp: "https://midhunrajgit0022.github.io/Streamo_Clone_Webpage/",
+    // },
    
 ]

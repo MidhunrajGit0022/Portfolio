@@ -175,6 +175,7 @@ export default function Portfolio() {
                             <Nav className="ms-auto p-1">
                                 <Nav.Link href="#Home" className='ms-4' onClick={handleNavLinkClick}><div className="navlink">Home</div></Nav.Link>
                                 <Nav.Link href="#About" className='ms-4' onClick={handleNavLinkClick}><div className="navlink">About</div></Nav.Link>
+                                <Nav.Link href="#Techstack" className='ms-4' onClick={handleNavLinkClick}><div className="navlink">Tech Stack</div></Nav.Link>
                                 <Nav.Link href="#Projects" className='ms-4' onClick={handleNavLinkClick}><div className="navlink">Projects</div></Nav.Link>
                                 <Nav.Link href="#Contact" className='ms-4' onClick={handleNavLinkClick}><div className="navlink">Contact</div></Nav.Link>
                                 <Nav.Link className='ms-4' onClick={() => { settheme(!theme) }}>  {theme
@@ -381,7 +382,7 @@ export default function Portfolio() {
                                                 <Row>
                                                     <div>
                                                         <Row>
-                                                            <span className="aboutrole">2023 - Current</span>
+                                                            <span className="aboutrole">2023 - Current (1 Year)</span>
                                                         </Row>
                                                         <Row>
                                                             <span className="aboutcontent">Softzane Solutions, Ayoor</span>
@@ -445,7 +446,7 @@ export default function Portfolio() {
                 {/* Section 2 Ended*/}
 
                 {/* Section 3 Tech Stack*/}
-                <div>
+                <div id="Techstack">
                     <Container className="text-lg-center text-center mt-5 techcontainer">
                         <div className="my-4 mx-lg-5 mx-2 ">
                             <span className="portfoliohead">TECH STACK</span>
@@ -832,6 +833,7 @@ export default function Portfolio() {
                                                     </div>
                                                     <div className="ProjectDetails mt-lg-2">
                                                         <div className="Projecttitle">{project.title}</div>
+                                                        <div className="Projectdate">{project.role}</div>
                                                         <div className="Projectdate">{project.date}</div>
                                                         <div className="Projectdescription mt-2">{project.description}</div>
                                                     </div>
@@ -839,12 +841,19 @@ export default function Portfolio() {
                                             </Col>
                                         ))}
                                 </Row>
-                                        {selectedProject && (
-                                <Modal show={show} onHide={handleClose} style={{ cursor: "pointer" }}>
-                                    <Modal.Header closeButton className="modalbg">{selectedProject.role}</Modal.Header>
-                                    <Modal.Body className="modalbg">
+                                {selectedProject && (
+                                    <Modal show={show} onHide={handleClose} style={{ cursor: "pointer" }}>
+                                        <Modal.Header closeButton className="modalbg">{selectedProject.role}</Modal.Header>
+                                        <Modal.Body className="modalbg">
                                             <>
-                                                <img src={selectedProject.image} className="modalimage" alt="Project Image" />
+                                                {/* <img src={selectedProject.image} className="modalimage" alt="Project Image" /> */}
+                                                {selectedProject.video ? (
+                                                    <video className="modalimage img-fluid" controls>
+                                                        <source src={selectedProject.video} type="video/mp4" />
+                                                    </video>
+                                                ) : (
+                                                    <img className="modalimage img-fluid" src={selectedProject.image} alt="Project" />
+                                                )}
                                                 <div className="ProjectDetails mt-lg-2">
                                                     <div className="modaltitle">{selectedProject.title}</div>
                                                     <div className="modaldate">{selectedProject.date}</div>
@@ -856,55 +865,55 @@ export default function Portfolio() {
                                                     <div className="modaldescription mt-2">{selectedProject.description}</div>
                                                 </div>
                                             </>
-                                    </Modal.Body>
-                                    <div className="modalbg rounded-bottom-3">
-                                        <Modal.Footer className="modalbtngroup d-flex justify-content-center  align-items-center ">
-                                            
-                                            {theme ? <>
-                                                {selectedProject?.github && ( 
-                                                <Button variant="outline-light" href={selectedProject?.github} target="_blank" rel="noopener noreferrer">
-                                                <BsGithub /> &nbsp;
-                                                GitHub
-                                            </Button>
-                                             )}
-                                            {selectedProject?.webapp && ( 
-                                                <Button
-                                                variant="outline-light"
-                                                href={selectedProject?.webapp}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                >
-                                                <CgWebsite /> &nbsp;
-                                                Demo
-                                            </Button>
-                                              )}
-                                    </>
-                                        :
-                                        <>
-                                         {selectedProject?.github && ( 
-                                        <Button variant="outline-dark" href={selectedProject?.github} target="_blank" rel="noopener noreferrer">
-                                        <BsGithub /> &nbsp;
-                                        GitHub
-                                    </Button>
-                                      )}
-                                    {selectedProject?.webapp && ( 
-                                        <Button
-                                        variant="outline-dark"
-                                        href={selectedProject?.webapp}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        >
-                                        <CgWebsite /> &nbsp;
-                                        Demo
-                                    </Button>
-                                     )}
-                                        </>
-                                        
-                                    }
-                                        </Modal.Footer>
-                                    </div>
-                                </Modal>
-                                        )}
+                                        </Modal.Body>
+                                        <div className="modalbg rounded-bottom-3">
+                                            <Modal.Footer className="modalbtngroup d-flex justify-content-center  align-items-center ">
+
+                                                {theme ? <>
+                                                    {selectedProject?.github && (
+                                                        <Button variant="outline-light" href={selectedProject?.github} target="_blank" rel="noopener noreferrer">
+                                                            <BsGithub /> &nbsp;
+                                                            GitHub
+                                                        </Button>
+                                                    )}
+                                                    {selectedProject?.webapp && (
+                                                        <Button
+                                                            variant="outline-light"
+                                                            href={selectedProject?.webapp}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                        >
+                                                            <CgWebsite /> &nbsp;
+                                                            Demo
+                                                        </Button>
+                                                    )}
+                                                </>
+                                                    :
+                                                    <>
+                                                        {selectedProject?.github && (
+                                                            <Button variant="outline-dark" href={selectedProject?.github} target="_blank" rel="noopener noreferrer">
+                                                                <BsGithub /> &nbsp;
+                                                                GitHub
+                                                            </Button>
+                                                        )}
+                                                        {selectedProject?.webapp && (
+                                                            <Button
+                                                                variant="outline-dark"
+                                                                href={selectedProject?.webapp}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                            >
+                                                                <CgWebsite /> &nbsp;
+                                                                Demo
+                                                            </Button>
+                                                        )}
+                                                    </>
+
+                                                }
+                                            </Modal.Footer>
+                                        </div>
+                                    </Modal>
+                                )}
                             </Container>
                         </div>
                     </Container>
