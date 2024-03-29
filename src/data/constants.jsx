@@ -1,58 +1,57 @@
 export const projects = [
     {
       id: 1,
-      title: "Civil Registry",
-      date: "Oct 2022 - April 2023",
+      title: "Shopping App",
+      // date: "Oct 2022 - April 2023",
       description:
-        "Generates the Documents, Cards, Certificates. The primary objective of this Website is to give awareness about the government or legal documents and its registration details as well as to help to register or apply for those documents.",
+        "I have created a user-friendly Flutter shopping app that seamlessly connects to product data through APIs. This project demonstrates my strong skills in app development, API integration, and UI design.",
       image:
-        "../assets/pro1.png",
+        "../assets/amazon.png",
       tags: [
-        "Html",
-        "CSS",
-        "CodeIgniter",
-        "MySql",
+        "Flutter",
+        "Dart",
+        "API",
       ],
-      category: "web app",
-      github: "https://github.com/MidhunrajGit0022",
-      webapp: "www.google.com",
-
+      category: "android app",
+      github: "https://github.com/MidhunrajGit0022/Shopping_App_API",
+      role: "Flutter Project"
+      // webapp: "www.google.com",
     },
     {
       id: 2,
-      title: "Civil android",
-      date: "Oct 2022 - April 2023",
+      title: "AddressBuk",
+      date: "Jan 2023 - Current",
       description:
-        "Generates the Documents, Cards, Certificates. The primary objective of this Website is to give awareness about the government or legal documents and its registration details as well as to help to register or apply for those documents.",
+        "Developed live Flutter project with Firebase integration for efficient shop discovery. Features Admin, Staff, and Public roles. Admins manage staff and shops; Staff update shop details. Public users search nearby shops, rate, and provide feedback. This project is live and showcases my skills in Flutter and Firebase.",
       image:
-        "../assets/pro1.png",
+        "../assets/blank.png",
       tags: [
-        "Html",
-        "CSS",
-        "CodeIgniter",
-        "MySql",
+        "Flutter",
+        "Dart",
+        "Firebase",
       ],
       category: "android app",
-      github: "https://github.com/MidhunrajGit0022",
-      webapp: "www.google.com",
+      // github: "https://github.com/MidhunrajGit0022/Shopping_App_API",
+      role: "Flutter (Live Project)"
+      // webapp: "www.google.com",
     },
     {
       id: 3,
-      title: "Civil android",
-      date: "Oct 2022 - April 2023",
+      title: "Blood Donation App",
+      // date: "Oct 2022 - April 2023",
       description:
-        "Generates the Documents, Cards, Certificates. The primary objective of this Website is to give awareness about the government or legal documents and its registration details as well as to help to register or apply for those documents.",
+        "Created a Flutter-based blood donation app featuring comprehensive CRUD operations. Users can effortlessly Create, Read, Update, and Delete donor profiles,. The app streamlines blood donation management, enhancing accessibility and efficiency in the process.",
       image:
-        "../assets/pro1.png",
+        "../assets/bloodapp.png",
       tags: [
-        "Html",
-        "CSS",
-        "CodeIgniter",
-        "MySql",
+        "Flutter",
+        "Dart",
+        
       ],
       category: "android app",
-      github: "https://github.com/MidhunrajGit0022",
-      webapp: "www.google.com",
+      github: "https://github.com/MidhunrajGit0022/Blood_Donation_App_CRUD",
+      role: "Flutter (Crud APP)"
+      // webapp: "www.google.com",
     },
    
 ]

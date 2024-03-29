@@ -708,6 +708,9 @@
 
 .modalbg{
   background-color: var(--modalprojectbackground);
+  color: var(--textcolor);
+  font-weight: bold;
+  font-family: cursive;
 }
 
 .modalimage{

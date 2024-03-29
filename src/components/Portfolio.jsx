@@ -839,10 +839,10 @@ export default function Portfolio() {
                                             </Col>
                                         ))}
                                 </Row>
-                                <Modal show={show} onHide={handleClose} style={{ cursor: "pointer" }}>
-                                    <Modal.Header closeButton className="modalbg"></Modal.Header>
-                                    <Modal.Body className="modalbg">
                                         {selectedProject && (
+                                <Modal show={show} onHide={handleClose} style={{ cursor: "pointer" }}>
+                                    <Modal.Header closeButton className="modalbg">{selectedProject.role}</Modal.Header>
+                                    <Modal.Body className="modalbg">
                                             <>
                                                 <img src={selectedProject.image} className="modalimage" alt="Project Image" />
                                                 <div className="ProjectDetails mt-lg-2">
@@ -856,47 +856,55 @@ export default function Portfolio() {
                                                     <div className="modaldescription mt-2">{selectedProject.description}</div>
                                                 </div>
                                             </>
-                                        )}
                                     </Modal.Body>
                                     <div className="modalbg rounded-bottom-3">
-                                        <Modal.Footer className="modalbtngroup">
+                                        <Modal.Footer className="modalbtngroup d-flex justify-content-center  align-items-center ">
                                             
                                             {theme ? <>
+                                                {selectedProject?.github && ( 
                                                 <Button variant="outline-light" href={selectedProject?.github} target="_blank" rel="noopener noreferrer">
                                                 <BsGithub /> &nbsp;
                                                 GitHub
                                             </Button>
-                                            <Button
+                                             )}
+                                            {selectedProject?.webapp && ( 
+                                                <Button
                                                 variant="outline-light"
                                                 href={selectedProject?.webapp}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                            >
+                                                >
                                                 <CgWebsite /> &nbsp;
                                                 Demo
                                             </Button>
+                                              )}
                                     </>
                                         :
                                         <>
+                                         {selectedProject?.github && ( 
                                         <Button variant="outline-dark" href={selectedProject?.github} target="_blank" rel="noopener noreferrer">
                                         <BsGithub /> &nbsp;
                                         GitHub
                                     </Button>
-                                    <Button
+                                      )}
+                                    {selectedProject?.webapp && ( 
+                                        <Button
                                         variant="outline-dark"
                                         href={selectedProject?.webapp}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                    >
+                                        >
                                         <CgWebsite /> &nbsp;
                                         Demo
                                     </Button>
+                                     )}
                                         </>
                                         
                                     }
                                         </Modal.Footer>
                                     </div>
                                 </Modal>
+                                        )}
                             </Container>
                         </div>
                     </Container>
