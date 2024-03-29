@@ -98,8 +98,8 @@ export const projects = [
     //     "video is an HTML, CSS, and JavaScript-based Clone UI project designed to showcase frontend skills. With its modern design and user-friendly approach, Streamo offers a seamless and engaging experience for users exploring the platform.",
     //     image:
     //     "../assets/streamo.png",
-    //     // video:
-    //     // "../assets/aa.mp4",
+    //     video:
+    //     "../assets/aa.mp4",
     //   tags: [
     //     "Html",
     //     "CSS",
