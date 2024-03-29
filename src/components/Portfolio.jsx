@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Button, Col, Container, Image, Nav, Navbar, Row, ToggleButton, ButtonGroup, Modal } from 'react-bootstrap';
+import React, { useEffect, useState, useRef } from "react";
+import { Button, Col, Container, Image, Nav, Navbar, Row, ButtonGroup, Modal } from 'react-bootstrap';
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 import '../components/Portfolio.css';
 import ScrollToTop from "react-scroll-to-top";
 import { Fade, } from "react-awesome-reveal";
 import { projects } from "../data/constants";
+import emailjs from '@emailjs/browser';
 import {
     AiFillGithub,
     AiFillInstagram,
@@ -28,12 +29,25 @@ export default function Portfolio() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [loading, setLoading] = useState(true);
+    const [open, setOpen] = useState(false);
+    const form = useRef();
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
+        .then((result) => {
+            setOpen(true);
+            form.current.reset();
+          }, (error) => {
+            console.log(error.text);
+          });
+    };
 
 
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
-        }, 2000);
+        }, 1700);
     }, [])
 
 
@@ -208,151 +222,15 @@ export default function Portfolio() {
                         {/* Navbar End*/}
 
                         {/* Section 1 - Intro */}
-                        {/* <Container id="Home" className="maincontainer" >
-                    <Row>
-                        <Col lg={5} md={6} sm={12} className="order-lg-2" >
-
-                            <div className="rightimg d-flex justify-content-center">
-                                <Image src="./assets/dp.jpeg" alt="" className="dpimg" />
-                            </div>
-                        </Col>
-                        <Col lg={7} md={6} sm={12} className="left-header" >
-                          
-                            <div>
-                            <Fade direction="down" duration={1000} triggerOnce={true}>
-                                <h1 className="leftfirsthead">Hi There!<span className="wave" role="img" aria-labelledby="wave">
-                                    👋🏻
-                                </span></h1>
-                                </Fade>
-
-                                <h1 className="leftsecondhead">I'm <strong className="main-name">Midhun Raj</strong></h1>
-                                <div className=" "><h2 className=" welcomtext ">{part}</h2></div>
-
-                                <p className="description">
-                                    "Brief description with insights into myself, my vocational journey and what i engage in professionally."
-                                </p>
-
-
-                            </div>
-                            <div>
-                                <Row className="d-flex proicons">
-                                    {theme
-                                        ?
-                                        <>
-                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
-                                                <a href="https://github.com/MidhunrajGit0022" target="_blank" rel="noreferrer" className="home-social-icons">
-                                                    <span className="social-icons">
-                                                        <AiFillGithub size={20} />
-                                                    </span>
-                                                </a>
-                                            </Col>
-                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
-                                                <a href="https://twitter.com/Midhun_raj0077" target="_blank" rel="noreferrer" className="home-social-icons">
-                                                    <span className="social-icons">
-                                                        <AiOutlineTwitter size={20} />
-                                                    </span>
-                                                </a>
-                                            </Col>
-                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
-                                                <a href="https://www.linkedin.com/in/midhunraj0022/" target="_blank" rel="noreferrer" className="home-social-icons">
-                                                    <span className="social-icons">
-                                                        <AiFillLinkedin size={20} />
-                                                    </span>
-                                                </a>
-                                            </Col>
-                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
-                                                <a href="https://www.instagram.com/_mi_._dhun_/" target="_blank" rel="noreferrer" className="home-social-icons">
-                                                    <span className="social-icons">
-                                                        <AiFillInstagram size={20} />
-                                                    </span>
-                                                </a>
-                                            </Col>
-                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
-                                                <a href="mailto:midhunraj0022@gmail.com" target="_blank" rel="noreferrer" className="home-social-icons">
-                                                    <span className="social-icons">
-                                                        <AiFillMail size={20} />
-                                                    </span>
-                                                </a>
-                                            </Col>
-                                        </>
-                                        :
-                                        <>
-                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
-                                                <a href="https://github.com/MidhunrajGit0022" target="_blank" rel="noreferrer" className="home-social-icons">
-                                                    <span className="social-icons">
-                                                        <AiFillGithub size={20} />
-                                                    </span>
-                                                </a>
-                                            </Col>
-                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
-                                                <a href="https://twitter.com/Midhun_raj0077" target="_blank" rel="noreferrer" className="home-social-icons">
-                                                    <span className="social-icons">
-                                                        <AiOutlineTwitter size={20} />
-                                                    </span>
-                                                </a>
-                                            </Col>
-                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
-                                                <a href="https://www.linkedin.com/in/midhunraj0022/" target="_blank" rel="noreferrer" className="home-social-icons">
-                                                    <span className="social-icons">
-                                                        <AiFillLinkedin size={20} />
-                                                    </span>
-                                                </a>
-                                            </Col>
-                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
-                                                <a href="https://www.instagram.com/_mi_._dhun_/" target="_blank" rel="noreferrer" className="home-social-icons">
-                                                    <span className="social-icons">
-                                                        <AiFillInstagram size={20} />
-                                                    </span>
-                                                </a>
-                                            </Col>
-                                            <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
-                                                <a href="mailto:midhunraj0022@gmail.com" target="_blank" rel="noreferrer" className="home-social-icons">
-                                                    <span className="social-icons">
-                                                        <AiFillMail size={20} />
-                                                    </span>
-                                                </a>
-                                            </Col>
-                                        </>
-                                    }
-                                </Row>
-                                <Row>
-                                    {theme ? <>
-                                        <div className="resumebtn">
-                                            <a href="./assets/cv.pdf" target="_blank">
-                                                <Button variant="outline-light" type="button" className="mt-4 rounded-5">
-                                                    Get Resume
-                                                </Button>
-
-                                            </a>
-                                        </div>
-                                    </>
-                                        :
-                                        <div className="resumebtn">
-                                            <a href="./assets/cv.pdf" target="_blank">
-                                                <Button variant="outline-dark" type="button" className="mt-4 rounded-5">
-                                                    Get Resume
-                                                </Button>
-
-                                            </a>
-                                        </div>
-                                    }
-                                </Row>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container> */}
                         <Container id="Home" className="maincontainer mt-3 my-3 my-lg-0 ">
                             <Row className="h-100">
                                 <Col lg={5} md={6} sm={12} className="order-lg-2 d-flex align-items-center justify-content-center" >
-
                                     <div className="rightimg d-flex justify-content-lg-start align-items-center mt-5 mt-lg-0">
                                         <Image src="./assets/dp.jpeg" alt="" className="dpimg" />
                                     </div>
                                 </Col>
                                 <Col className="d-flex align-items-center justify-content-center ms-lg-5">
-                                    <div >
-
-
+                                    <div>
                                         <div>
                                             <Fade direction="down" duration={1000} triggerOnce={true}>
                                                 <h1 className="leftfirsthead">Hi There!<span className="wave" role="img" aria-labelledby="wave">
@@ -366,8 +244,6 @@ export default function Portfolio() {
                                             <p className="description">
                                                 "Brief description with insights into myself, my vocational journey and what i engage in professionally."
                                             </p>
-
-
                                         </div>
                                         <div>
                                             <Row className="d-flex proicons">
@@ -1074,6 +950,36 @@ export default function Portfolio() {
                             </Container>
                         </div>
                         {/* Section 4 Ended*/}
+
+                        {/* Section 5 Contact */}
+                       <div id="Contact">
+                       <Container className="text-lg-center text-center mt-5 techcontainer">
+                                <div className="my-4 mx-lg-5 mx-2">
+                                    <span className="portfoliohead">CONTACT</span>
+                                    <p className="techstackpara mt-lg-1">Feel free to reach out to me for any questions or opportunities!</p>
+                                </div>
+                                <div>
+                                    <Row>
+                                        <Col lg={2}>
+                                            <span>Location</span>
+                                        </Col>
+                                        <Col lg={2}>
+                                            <span>Mail</span>
+                                        </Col>
+                                        <Col lg={2}>
+                                            <span>Contact</span>
+                                        </Col>
+                                        <Col lg={2}>
+                                            <span>Language</span>
+                                        </Col>
+                                    </Row>
+                                </div>
+
+                        </Container>
+
+                       </div>
+
+                        {/* Section 5 Ended */}
 
 
                     </div>
