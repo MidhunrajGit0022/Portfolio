@@ -2,7 +2,8 @@
   --bg: #ffffff;
   --bgimg: url(../../public/assets/bgim2.jpg);
   --navlink: rgb(0, 0, 0);
-  --navlinkhover: rgba(26, 26, 26, 0.831);
+  /* --navlinkhover: rgba(26, 26, 26, 0.831); */
+  --navlinkhover: #147efb;
   --background-color: #FFFFFF;
   --imgshadow: rgba(179, 236, 240, 0.504);
   --textcolor: #1C1E21;
@@ -26,7 +27,8 @@
   --bg: #242526;
   --bgimg: url(../../public/assets/bgim.jpeg);
   --navlink: rgba(255, 255, 255, 0.997);
-  --navlinkhover: rgba(235, 234, 234, 0.633);
+  /* --navlinkhover: rgba(235, 234, 234, 0.633); */
+  --navlinkhover: #147efb;
   --background-color: #1B1B1D;
   --textcolor: #E3E3E3;
   --bgshadow: rgba(73, 73, 73, 0.484);
@@ -356,7 +358,7 @@
   width: 40px;
   height: 40px;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 2em;
   background: var(--textcolor);
   border-radius: 50%;
@@ -616,7 +618,7 @@
   overflow: hidden;
   display: -webkit-box;
   max-width: 100%;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
 }
@@ -700,7 +702,7 @@
 }
 
 #root .custom-scroll-to-top {
-  background-color: var(--scrolltotoproot) !important;
+  background-color: var(--scrolltotoproot) ;
 }
 
 .custom-scroll-to-top svg {
@@ -833,12 +835,72 @@
 }
 
 
+.concthead{
+  color: var(--textcolor);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contactcontent{
+  color: var(--textcolor);
+  font-size: 1.0em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contactcontent:hover{
+  color: #147efb;
+  
+}
+
+.iconcontact{
+  color: #147efb;
+  cursor: pointer;
+}
 
 
+/* Footer */
 
+.footer {
+  border-top: 1px solid var(--textcolor);
+  bottom: 0 ;
+  padding-top: 10px ;
+  padding-bottom: 8px  ;
+}
+.footer-copywright {
+  text-align: center;
+  color: var(--textcolor);
+}
 
+.footer-body {
+  text-align: center ;
+}
 
+@media (max-width: 767px) {
+  .footer-copywright {
+    text-align: center ;
+  }
 
+  .footer-body {
+    text-align: center ;
+  }
+}
+
+.footer h3 {
+  font-size: 1rem;
+  color: var(--textcolor) ;
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em ;
+}
+.footer-icons {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em ;
+  padding: 0 ;
+}
+
+.footericoncolor{
+  color: var(--textcolor);
+}
 
 
 
