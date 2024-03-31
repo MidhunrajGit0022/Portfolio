@@ -3,6 +3,8 @@ export const projects = [
       id: 1,
       title: "Shopping App",
       // date: "Oct 2022 - April 2023",
+      video:
+        "../assets/Amazonapi.mp4",
       description:
         "I have created a user-friendly Flutter shopping app that seamlessly connects to product data through APIs. This project demonstrates my strong skills in app development, API integration, and UI design.",
       image:
@@ -62,6 +64,8 @@ export const projects = [
         "Webhost is a React-based UI project designed to showcase frontend skills. With its modern design and user-friendly approach, Webhost offers a seamless and engaging experience for users exploring webhosting platform.",
       image:
         "../assets/webhost_react.png",
+      video:
+        "../assets/Webhost_Clone_Webpage.mp4",
       tags: [
         "React",
         "React-Bootstrap",
@@ -80,6 +84,8 @@ export const projects = [
         "Streamo is an HTML, CSS, and JavaScript-based Clone UI project designed to showcase frontend skills. With its modern design and user-friendly approach, Streamo offers a seamless and engaging experience for users exploring the platform.",
       image:
         "../assets/streamo.png",
+      video:
+        "../assets/Streamovideo.mp4",
       tags: [
         "Html",
         "CSS",
@@ -90,25 +96,26 @@ export const projects = [
       role: "Front-end Development",
       webapp: "https://midhunrajgit0022.github.io/Streamo_Clone_Webpage/",
     },
-    // {
-    //   id: 5,
-    //   title: "video",
-    //   date: "Aug 2023 - Sep 2023",
-    //   description:
-    //     "video is an HTML, CSS, and JavaScript-based Clone UI project designed to showcase frontend skills. With its modern design and user-friendly approach, Streamo offers a seamless and engaging experience for users exploring the platform.",
-    //     image:
-    //     "../assets/streamo.png",
-    //     video:
-    //     "../assets/aa.mp4",
-    //   tags: [
-    //     "Html",
-    //     "CSS",
-    //     "Javascript"
-    //   ],
-    //   category: "web app",
-    //   github: "https://github.com/MidhunrajGit0022/Streamo_Clone_Webpage",
-    //   role: "Front-end Development",
-    //   webapp: "https://midhunrajgit0022.github.io/Streamo_Clone_Webpage/",
-    // },
+    {
+      id: 5,
+      title: "Shopping Website",
+      // date: "Aug 2023 - Sep 2023",
+      description:
+        "I have created a user-friendly React-based shopping website that seamlessly connects to product data through APIs. This project demonstrates my strong skills in Web development, API integration, and UI design.",
+        image:
+        "../assets/thumb onlineshop.png",
+        video:
+        "../assets/Online Shopping Video.mp4",
+      tags: [
+        "Html",
+        "CSS",
+        "Javascript",
+        "Fake Store API"
+      ],
+      category: "web app",
+      github: "https://github.com/MidhunrajGit0022/Shopping_Website_API",
+      role: "Front-end Development",
+      // webapp: "https://midhunrajgit0022.github.io/Streamo_Clone_Webpage/",
+    },
    
 ]

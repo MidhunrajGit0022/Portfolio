@@ -517,7 +517,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={1200} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -533,7 +533,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={1400} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -549,7 +549,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={1600} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -565,7 +565,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={1800} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -581,7 +581,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={2000} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -613,7 +613,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={1200} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -629,7 +629,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={1400} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -645,7 +645,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={1600} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -661,7 +661,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={1800} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -677,7 +677,7 @@ export default function Portfolio() {
                                 </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={2000} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -709,7 +709,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={1200} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -725,7 +725,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={1400} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -741,7 +741,7 @@ export default function Portfolio() {
                                 </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={1600} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -757,7 +757,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={1800} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -773,7 +773,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={2000} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -805,7 +805,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={1200} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -821,7 +821,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6}>
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={1400} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -837,7 +837,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6} className="rounded-5">
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={1600} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -853,7 +853,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6} className="rounded-5">
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={1800} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
@@ -869,7 +869,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg={2} md={3} sm={4} xs={6} className="rounded-5">
-                                <Fade direction="up" duration={1000} triggerOnce={true}>
+                                <Fade direction="up" duration={2000} triggerOnce={true}>
                                     <div className="stackcontent mt-3">
                                         <picture>
                                             <img
