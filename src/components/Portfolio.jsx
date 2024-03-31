@@ -961,7 +961,7 @@ export default function Portfolio() {
                                                     <div className="ProjectDetails mt-lg-2">
                                                         <div className="modaltitle">{selectedProject.title}</div>
                                                         <div className="modaldate">{selectedProject.date}</div>
-                                                        <div className="modaltags mt-3">
+                                                        <div className="modaltags mt-2">
                                                             {selectedProject.tags?.map((tag, index) => (
                                                                 <span className="modaltag" key={index}>{tag}</span>
                                                             ))}

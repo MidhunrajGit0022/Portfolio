@@ -721,7 +721,7 @@
   background-color: var(--modalprojectbackground);
   color: var(--textcolor);
   font-weight: bold;
-  font-family: cursive;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .modalimage{
@@ -751,12 +751,14 @@
   display: flex;
   width: 100%;
   justify-content: start;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   flex-wrap: wrap;
   gap: 10px;
 }
 
 .modaltag{
   font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
   color: #147efb; 
   border-radius: 10px;
@@ -778,6 +780,7 @@
 .modalbtngroup{
   display: flex;
   justify-content:center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   gap: 12px;
 }
 
