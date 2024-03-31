@@ -975,7 +975,7 @@ export default function Portfolio() {
 
                                                     {theme ? <>
                                                         {selectedProject?.github && (
-                                                            <Button variant="outline-light" href={selectedProject?.github} target="_blank" rel="noopener noreferrer">
+                                                            <Button variant="outline-light" href={selectedProject?.github} target="_blank">
                                                                 <BsGithub /> &nbsp;
                                                                 GitHub
                                                             </Button>
@@ -985,7 +985,7 @@ export default function Portfolio() {
                                                                 variant="outline-light"
                                                                 href={selectedProject?.webapp}
                                                                 target="_blank"
-                                                                rel="noopener noreferrer"
+                                                               
                                                             >
                                                                 <CgWebsite /> &nbsp;
                                                                 Demo
@@ -995,7 +995,7 @@ export default function Portfolio() {
                                                         :
                                                         <>
                                                             {selectedProject?.github && (
-                                                                <Button variant="outline-dark" href={selectedProject?.github} target="_blank" rel="noopener noreferrer">
+                                                                <Button variant="outline-dark" href={selectedProject?.github} target="_blank">
                                                                     <BsGithub /> &nbsp;
                                                                     GitHub
                                                                 </Button>
@@ -1005,7 +1005,7 @@ export default function Portfolio() {
                                                                     variant="outline-dark"
                                                                     href={selectedProject?.webapp}
                                                                     target="_blank"
-                                                                    rel="noopener noreferrer"
+                                                                   
                                                                 >
                                                                     <CgWebsite /> &nbsp;
                                                                     Demo
@@ -1116,7 +1116,7 @@ export default function Portfolio() {
                                         href="https://github.com/MidhunrajGit0022"
                                         style={{ color: "white" }}
                                         target="_blank"
-                                        rel="noopener noreferrer"
+                                       
                                         className="ms-3"
                                     >
                                         <AiFillGithub className="footericoncolor" />
@@ -1125,7 +1125,7 @@ export default function Portfolio() {
                                         href="https://twitter.com/Midhun_raj0077"
                                         style={{ color: "white" }}
                                         target="_blank"
-                                        rel="noopener noreferrer"
+                                       
                                         className="ms-3"
                                     >
                                         <AiOutlineTwitter className="footericoncolor" />
@@ -1134,7 +1134,7 @@ export default function Portfolio() {
                                         href="https://www.linkedin.com/in/midhunraj0022/"
                                         style={{ color: "white" }}
                                         target="_blank"
-                                        rel="noopener noreferrer"
+                                       
                                         className="ms-3"
                                     >
                                         <FaLinkedinIn className="footericoncolor" />
@@ -1143,7 +1143,7 @@ export default function Portfolio() {
                                         href="https://www.instagram.com/_mi_._dhun_/"
                                         style={{ color: "white" }}
                                         target="_blank"
-                                        rel="noopener noreferrer"
+                                       
                                         className="ms-3"
                                     >
                                         <AiFillInstagram className="footericoncolor" />
