@@ -214,7 +214,7 @@ export default function Portfolio() {
                     {/* Section 1 - Intro */}
                     <Container id="Home" className="maincontainer mt-3 my-3 my-lg-0 ">
                         <Row className="h-100">
-                            <Col lg={5} md={6} sm={12} className="order-lg-2 d-flex align-items-center justify-content-center" >
+                            <Col lg={5} md={7} sm={12} className="order-lg-2 d-flex align-items-center justify-content-center" >
                                 <div className="rightimg d-flex justify-content-lg-start align-items-center mt-5 mt-lg-0">
                                     <Image src="./assets/dp.jpeg" alt="" className="dpimg" />
                                 </div>

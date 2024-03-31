@@ -100,8 +100,8 @@
 
 .description {
   color: #757575fe;
-  font-size: clamp(12px, 3vw, 18px);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: clamp(12px, 3vw, 16px);
+  font-family: cursive;
   font-style: italic;
   max-width: 80%;
 }
@@ -215,6 +215,7 @@
   .description {
     text-align: center;
     max-width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
   .proicons {
@@ -260,6 +261,7 @@
   .description {
     text-align: center;
     max-width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
   .proicons {
@@ -298,7 +300,6 @@
 
 .rightimg {
   width: 100%;
-  /* padding-top: 110px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -317,11 +318,13 @@
   animation: shadow-animation 3s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
 
   @media (max-width: 768px) {
+    border-radius: 50%;
     max-width: 400px;
     max-height: 400px;
   }
 
   @media (max-width: 640px) {
+    border-radius: 50%;
     max-width: 280px;
     max-height: 280px;
   }
@@ -821,10 +824,12 @@
 
   .modaldescription {
     font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
   .modaltag {
     font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
   .modalbtn {
