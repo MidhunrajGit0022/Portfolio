@@ -474,7 +474,7 @@ export default function Portfolio() {
                                 <Col lg={5} className="d-none d-lg-block" >
                                     <>
                                         <Container  >
-                                        <Fade direction="up" duration={1000} triggerOnce={true}>
+                                        <Fade  duration={1000} triggerOnce={true}>
                                             <div className="mt-lg-5 d-flex  justify-content-center align-items-center  ">
 
                                                 <Image src="./assets/abut.jpg" className="aboutimg my-5" alt="Aboutpic"></Image>
