@@ -1058,7 +1058,7 @@ export default function Portfolio() {
                                             </Col>
                                             <Col md={9}>
                                                 <span className="concthead">Phone</span>
-                                                <p className="contactcontent">91+ 8086370435</p>
+                                                <p className="contactcontent">+91 8086370435</p>
                                             </Col>
                                         </Row>
                                     </Fade>
