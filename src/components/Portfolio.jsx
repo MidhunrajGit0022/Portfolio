@@ -1030,7 +1030,7 @@ export default function Portfolio() {
                         <Container className="text-lg-center text-center p-lg-5 p-4 contactcontainer">
                             <div className="my-4 mx-lg-5 mx-2">
                             <Fade direction="up" duration={1000} triggerOnce={true}>
-                                <span className="portfoliohead">CONTACT</span>
+                                <span className="portfoliohead">CONTACT INFO</span>
                                 </Fade>
                                 <Fade direction="up" duration={1000} triggerOnce={true}>
                                 <p className="techstackpara mt-lg-1">Feel free to reach out to me for any questions or opportunities!</p>
