@@ -613,6 +613,18 @@
   color: var(--textcolor); 
 }
 
+.Projectrole {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--textcolor); 
+}
+
+.Projectmainrole {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--textcolor); 
+}
+
 .Projectdescription {
   font-size: 0.8rem;
   font-weight: 400;
@@ -659,6 +671,15 @@
 
   .Projectdate {
     font-size: 10px; 
+  }
+
+  .Projectrole {
+    font-size: 10px; 
+  }
+
+  .Projectmainrole {
+    font-size: 12px; 
+    font-weight: bold;
   }
 
   .Projectdescription {

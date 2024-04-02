@@ -935,7 +935,8 @@ export default function Portfolio() {
                                                         </div>
                                                         <div className="ProjectDetails mt-lg-2">
                                                             <div className="Projecttitle">{project.title}</div>
-                                                            <div className="Projectdate">{project.role}</div>
+                                                            <div className="Projectrole">{project.role}</div>
+                                                            <div className="Projectmainrole">{project.mainrole}</div>
                                                             <div className="Projectdate">{project.date}</div>
                                                             <div className="Projectdescription mt-2">{project.description}</div>
                                                         </div>
