@@ -1086,7 +1086,7 @@ export default function Portfolio() {
                                             <Col lg={3} md={3} className="py-3 px-3 contactiocn">
                                                 <LuLanguages className="iconcontact fa-lg" />
                                             </Col>
-                                            <Col lg={5} md={9}>
+                                            <Col lg={5} md={9}> 
                                                 <span className="concthead">Language</span>
                                                 <p className="contactcontent">Malayalam,English,Tamil</p>
                                             </Col>
