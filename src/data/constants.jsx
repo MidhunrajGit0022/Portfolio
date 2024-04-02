@@ -77,7 +77,7 @@ export const projects = [
       webapp: "https://midhunrajgit0022.github.io/Webhost_Clone_Webpage/",
     },
     {
-      id: 4,
+      id: 5,
       title: "Streamo",
       date: "Aug 2023 - Sep 2023",
       description:
@@ -97,7 +97,7 @@ export const projects = [
       webapp: "https://midhunrajgit0022.github.io/Streamo_Clone_Webpage/",
     },
     {
-      id: 5,
+      id: 6,
       title: "Shopping Website",
       // date: "Aug 2023 - Sep 2023",
       description:
@@ -115,6 +115,29 @@ export const projects = [
       category: "web app",
       github: "https://github.com/MidhunrajGit0022/Shopping_Website_API",
       role: "Front-end Development",
+      // webapp: "https://midhunrajgit0022.github.io/Streamo_Clone_Webpage/",
+    },
+    {
+      id: 7,
+      title: "SocialZone",
+      date: "Socialmedia Platform",
+      description:
+        "A React-based social media platform, equipped with a simple CRUD application using MERN Stack, empowers users to efficiently manage their online presence. It offers a range of essential tools for social media management.",
+        image:
+        "../assets/socialmediathumb.png",
+        video:
+        "../assets/socialmedia_website.mp4",
+      tags: [
+        "React",
+        "CSS",
+        "Javascript",
+        "MongoDb",
+        "Express.js",
+        "Node.js",
+      ],
+      category: "web app",
+      // github: "https://github.com/MidhunrajGit0022/Shopping_Website_API",
+      role: "Mern Project",
       // webapp: "https://midhunrajgit0022.github.io/Streamo_Clone_Webpage/",
     },
    
