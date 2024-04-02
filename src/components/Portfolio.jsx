@@ -1052,7 +1052,7 @@ export default function Portfolio() {
                                     </Fade>
                                 </Col>
                                 <Col lg className="mx-lg-5 ">
-                                    <Fade direction="up" duration={2000} triggerOnce={true}>
+                                    <Fade direction="up"  duration={2000} triggerOnce={true}> 
                                         <Row className="bg-info1">
                                             <Col lg={3} md={3} className="py-3 px-3 contactiocn">
                                                 <i className="fa-solid fa-phone fa-lg iconcontact"></i>
