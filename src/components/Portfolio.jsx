@@ -1041,10 +1041,10 @@ export default function Portfolio() {
                                 <Col lg className="mx-lg-5 ">
                                     <Fade direction="up" duration={1500} triggerOnce={true}>
                                         <Row>
-                                            <Col lg={3} md={3} className="py-3 px-3 contact__icon-box">
+                                            <Col lg={3} className="py-3 px-3 contact__icon-box">
                                                 <i className="fa-solid fa-location-dot fa-lg iconcontact"></i>
                                             </Col>
-                                            <Col md={9}>
+                                            <Col lg={9}>
                                                 <span className="concthead">Location</span>
                                                 <p className="contactcontent">Kerala, India</p>
                                             </Col>
@@ -1054,10 +1054,10 @@ export default function Portfolio() {
                                 <Col lg className="mx-lg-5 ">
                                     <Fade direction="up"  duration={2000} triggerOnce={true}> 
                                         <Row className="bg-info1">
-                                            <Col lg={3} md={3} className="py-3 px-3 contactiocn">
+                                            <Col lg={3} className="py-3 px-3 contactiocn">
                                                 <i className="fa-solid fa-phone fa-lg iconcontact"></i>
                                             </Col>
-                                            <Col md={9}>
+                                            <Col lg={9}>
                                                 <span className="concthead">Phone</span>
                                                 <p className="contactcontent">+91 8086370435</p>
                                             </Col>
@@ -1067,10 +1067,10 @@ export default function Portfolio() {
                                 <Col lg className="mx-lg-5 ">
                                     <Fade direction="up" duration={2500} triggerOnce={true}>
                                         <Row className="bg-info1">
-                                            <Col lg={3} md={3} className="py-3 px-3 contactiocn">
+                                            <Col lg={3} className="py-3 px-3 contactiocn">
                                                 <i className="fa-solid fa-envelope fa-lg iconcontact"></i>
                                             </Col>
-                                            <Col lg={5} md={9}>
+                                            <Col lg={9}>
                                                 <span className="concthead">Email</span>
                                                 <a href="mailto:midhunraj0022@gmail.com" target="_blank" className=" text-decoration-none ">
                                                     <p className="contactcontent">midhunraj0022@gmail.com</p>
@@ -1080,7 +1080,7 @@ export default function Portfolio() {
                                         </Row>
                                     </Fade>
                                 </Col>
-                                <Col lg className="mx-lg-5 ">
+                                {/* <Col lg className="mx-lg-5 ">
                                     <Fade direction="up" duration={3000} triggerOnce={true}>
                                         <Row className="bg-info1">
                                             <Col lg={3} md={3} className="py-3 px-3 contactiocn">
@@ -1092,7 +1092,7 @@ export default function Portfolio() {
                                             </Col>
                                         </Row>
                                     </Fade>
-                                </Col>
+                                </Col> */}
                             </Row>
                         </Container>
                     </div>
