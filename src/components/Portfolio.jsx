@@ -11,7 +11,6 @@ import {
 import { BsGithub } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
 import { FaLinkedinIn } from "react-icons/fa";
-import { LuLanguages } from "react-icons/lu";
 import ScrollToTop from "react-scroll-to-top";
 import '../components/Portfolio.css';
 import { projects } from "../data/constants";
