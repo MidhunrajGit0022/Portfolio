@@ -367,7 +367,7 @@ export default function Portfolio() {
                                         {/* <h5 className="navheads text-secondary mb-3"><b><i>{'<--  Who am I  --/>'}</i></b></h5> */}
                                         <Fade direction="up" duration={1500} triggerOnce={true}>
                                         <p className="aboutpara">Experienced developer adept in Flutter and MERN stack technologies
-                                            (Flutter, Firebase, MongoDB, Express.js, React.js, Node.js).
+                                            (Flutter, Dart, Firebase, MongoDB, Express.js, React.js, Node.js).
                                             Skilled in frontend and backend development, with a focus on user-friendly design.
                                             Eager to collaborate and learn within a development team.</p>
                                             </Fade>
