@@ -141,6 +141,23 @@ export const projects = [
       role: "Front-end Development",
       // webapp: "https://midhunrajgit0022.github.io/Streamo_Clone_Webpage/",
     },
+    {
+      id: 8,
+      title: "Aero_Clone_Website",
+      // date: "Aug 2023 - Sep 2023",
+      description:
+        "AeroShip is a React-based UI project designed to showcase frontend skills. With its modern design, user-friendly approach, and complete responsive website, AeroShip offers a seamless and engaging experience for users exploring the platform.",
+        image:
+        "../assets/aeroship.png",
+      tags: [
+        "React",
+        "Tailwind",
+      ],
+      category: "web app",
+      github: "https://github.com/MidhunrajGit0022/Aero_Clone",
+      role: "Front-end Development",
+      webapp: "https://aero-clone.vercel.app/",
+    },
     
    
 ]
