@@ -1,5 +1,25 @@
 export const projects = [
     {
+      id: 9,
+      title: "News API App",
+      // date: "Oct 2022 - April 2023",
+      video:
+        "../assets/newapivideo.mp4",
+      description:
+        "I developed a user-friendly Flutter News API application that efficiently connects to news data through robust API integrations. This project highlights my expertise in mobile app development, seamless API integration, and intuitive UI design.",
+      image:
+        "../assets/newsapi.jpg",
+      tags: [
+        "Flutter",
+        "Dart",
+        "API",
+      ],
+      category: "android app",
+      github: "https://github.com/MidhunrajGit0022/News_API",
+      role: "Flutter Project"
+      // webapp: "www.google.com",
+    },
+    {
       id: 1,
       title: "Shopping App",
       // date: "Oct 2022 - April 2023",
@@ -53,7 +73,7 @@ export const projects = [
       ],
       category: "android app",
       // github: "https://github.com/MidhunrajGit0022/Shopping_App_API",
-      role: "Flutter (Live Project)"
+      role: "Flutter (Search Application)"
       // webapp: "www.google.com",
     },
     {
