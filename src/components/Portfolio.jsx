@@ -406,7 +406,7 @@ export default function Portfolio() {
                                                                 <span className="aboutrole">App Development</span>
                                                             </Row>
                                                             <Row>
-                                                                <span className="aboutcontent">Android App Development</span>
+                                                                <span className="aboutcontent">Mobile App Development</span>
                                                             </Row>
                                                         </div>
                                                     </Row>
