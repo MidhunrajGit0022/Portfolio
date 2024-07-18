@@ -95,7 +95,32 @@ export const projects = [
         "Node.js",
       ],
       category: "web app",
-      // github: "https://github.com/MidhunrajGit0022/Shopping_Website_API",
+      github: "https://github.com/MidhunrajGit0022/Socialzone",
+      mainrole: "Mern Project",
+      // role: "Mern Project",
+      // webapp: "https://midhunrajgit0022.github.io/Streamo_Clone_Webpage/",
+    },
+    {
+      id: 10,
+      title: "Bicycle_Website",
+      date: "Ecommerce Platform",
+      description:
+        "A React-based bicycle Ecommerce platform, equipped with a simple CRUD application using the MERN stack, empowers users to efficiently manage their online presence. It offers a range of essential tools for bicycle Ecommerce management, using Redux for state management.",
+        image:
+        "../assets/cyclethumb.png",
+        // video:
+        // "../assets/socialmedia_website.mp4",
+      tags: [
+        "React",
+        "CSS",
+        "Javascript",
+        "Express.js",
+        "Node.js",
+        "Redux",
+        "MongoDb",
+      ],
+      category: "web app",
+      // github: "https://github.com/MidhunrajGit0022/Socialzone",
       mainrole: "Mern Project",
       // role: "Mern Project",
       // webapp: "https://midhunrajgit0022.github.io/Streamo_Clone_Webpage/",
