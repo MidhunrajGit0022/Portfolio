@@ -120,7 +120,7 @@ export const projects = [
         "MongoDb",
       ],
       category: "web app",
-      // github: "https://github.com/MidhunrajGit0022/Socialzone",
+      github: "https://github.com/MidhunrajGit0022/Bicycle_Website",
       mainrole: "Mern Project",
       // role: "Mern Project",
       // webapp: "https://midhunrajgit0022.github.io/Streamo_Clone_Webpage/",
