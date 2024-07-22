@@ -6,11 +6,11 @@ import {
     AiFillInstagram,
     AiFillLinkedin,
     AiFillMail,
-    AiOutlineTwitter,
 } from "react-icons/ai";
 import { BsGithub } from "react-icons/bs";
 import { CgWebsite } from "react-icons/cg";
 import { FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import ScrollToTop from "react-scroll-to-top";
 import '../components/Portfolio.css';
 import { projects } from "../data/constants";
@@ -255,7 +255,7 @@ export default function Portfolio() {
                                                     <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
                                                         <a href="https://twitter.com/Midhun_raj0077" target="_blank" rel="noreferrer" className="home-social-icons">
                                                             <span className="social-icons">
-                                                                <AiOutlineTwitter size={20} />
+                                                                <FaXTwitter size={20} />
                                                             </span>
                                                         </a>
                                                     </Col>
@@ -293,7 +293,7 @@ export default function Portfolio() {
                                                     <Col xs={2} sm={2} md={2} lg={1} className="social-icons">
                                                         <a href="https://twitter.com/Midhun_raj0077" target="_blank" rel="noreferrer" className="home-social-icons">
                                                             <span className="social-icons">
-                                                                <AiOutlineTwitter size={20} />
+                                                                <FaXTwitter size={20} />
                                                             </span>
                                                         </a>
                                                     </Col>
@@ -1129,7 +1129,7 @@ export default function Portfolio() {
                                        
                                         className="ms-3"
                                     >
-                                        <AiOutlineTwitter className="footericoncolor" />
+                                        <FaXTwitter className="footericoncolor" />
                                     </a>
                                     <a
                                         href="https://www.linkedin.com/in/midhunraj0022/"
