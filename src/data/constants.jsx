@@ -58,24 +58,24 @@ export const projects = [
       role: "Flutter (Crud App)"
       // webapp: "www.google.com",
     },
-    {
-      id: 3,
-      title: "AddressBuk",
-      date: "Jan 2023 - Current",
-      description:
-        "Developed live Flutter project with Firebase integration for efficient shop discovery. Features Admin, Staff, and Public roles. Admins manage staff and shops; Staff update shop details. Public users search nearby shops, rate, and provide feedback. This project is live and showcases my skills in Flutter and Firebase.",
-      image:
-        "../assets/underconstruction.png",
-      tags: [
-        "Flutter",
-        "Dart",
-        "Firebase",
-      ],
-      category: "android app",
-      // github: "https://github.com/MidhunrajGit0022/Shopping_App_API",
-      role: "Flutter (Search Application)"
-      // webapp: "www.google.com",
-    },
+    // {
+    //   id: 3,
+    //   title: "AddressBuk",
+    //   date: "Jan 2023 - Current",
+    //   description:
+    //     "Developed live Flutter project with Firebase integration for efficient shop discovery. Features Admin, Staff, and Public roles. Admins manage staff and shops; Staff update shop details. Public users search nearby shops, rate, and provide feedback. This project is live and showcases my skills in Flutter and Firebase.",
+    //   image:
+    //     "../assets/underconstruction.png",
+    //   tags: [
+    //     "Flutter",
+    //     "Dart",
+    //     "Firebase",
+    //   ],
+    //   category: "android app",
+    //   // github: "https://github.com/MidhunrajGit0022/Shopping_App_API",
+    //   role: "Flutter (Search Application)"
+    //   // webapp: "www.google.com",
+    // },
     {
       id: 10,
       title: "Bicycle_Website",
