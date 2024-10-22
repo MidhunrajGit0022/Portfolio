@@ -420,10 +420,20 @@ export default function Portfolio() {
                                                     <Row>
                                                         <div>
                                                             <Row>
-                                                                <span className="aboutrole">2023 - Current (1 Year)</span>
+                                                                <span className="aboutrole">2023 - 2024</span>
                                                             </Row>
                                                             <Row>
                                                                 <span className="aboutcontent">Softzane Solutions, Ayoor</span>
+                                                            </Row>
+                                                        </div>
+                                                    </Row>
+                                                    <Row>
+                                                        <div>
+                                                            <Row>
+                                                                <span className="aboutrole">2024 - Current</span>
+                                                            </Row>
+                                                            <Row>
+                                                                <span className="aboutcontent">Vikn Codes, Cyber Park, Calicut</span>
                                                             </Row>
                                                         </div>
                                                     </Row>
