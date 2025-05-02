@@ -105,7 +105,7 @@ export default function Portfolio() {
 
     const words = [
         'Flutter Developer',
-        'MERN stack Developer',
+        'MERN Stack Developer',
         'Front-end Developer',
         'Back-end Developer',
         'Mobile App Developer',
