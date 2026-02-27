@@ -337,7 +337,7 @@ export default function Portfolio() {
                                             </>
                                                 :
                                                 <div className="resumebtn">
-                                                    {/* <a href="" target="_blank"> */}
+                                                    {/* <a href="" target="_blank"> */} 
                                                     <a href="./assets/cv.pdf" target="_blank">
                                                         <Button variant="outline-dark" type="button" className="mt-4 rounded-5">
                                                             Get Resume 
