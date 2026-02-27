@@ -103,13 +103,6 @@ export default function Portfolio() {
 
 
 
-    const words = [
-        'Flutter Developer',
-        'MERN Stack Developer',
-        'Front-end Developer',
-        'Back-end Developer',
-        'Mobile App Developer',
-    ];
 
     // let i = 0;
     const iRef = useRef(0);
@@ -117,11 +110,10 @@ export default function Portfolio() {
     const forwardsRef = useRef(true);
     const skipCountRef = useRef(0);
     // let offset = 0;
-    const len = words.length;
+
     // let forwards = true;
     // let skip_count = 0;
-    const skip_delay = 15;
-    const speed = 70;
+
 
 
     // useEffect(() => {
@@ -158,6 +150,17 @@ export default function Portfolio() {
     // }, [i, offset, forwards, skip_count]);
 
     useEffect(() => {
+
+        const words = [
+            'Flutter Developer',
+            'MERN Stack Developer',
+            'Front-end Developer',
+            'Back-end Developer',
+            'Mobile App Developer',
+        ];
+        const len = words.length;
+        const skip_delay = 15;
+        const speed = 70;
         const intervalId = setInterval(() => {
             if (forwardsRef.current) {
                 if (offsetRef.current >= words[iRef.current].length) {
@@ -1119,7 +1122,7 @@ export default function Portfolio() {
                                                 </Col>
                                                 <Col lg={9}>
                                                     <span className="concthead">Email</span>
-                                                    <a href="mailto:midhunraj0022@gmail.com" target="_blank" className=" text-decoration-none ">
+                                                    <a href="mailto:midhunraj0022@gmail.com" target="_blank" rel="noreferrer" className=" text-decoration-none ">
                                                         <p className="contactcontent">midhunraj0022@gmail.com</p>
                                                     </a>
 
