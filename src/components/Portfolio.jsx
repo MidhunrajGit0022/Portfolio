@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { Button, ButtonGroup, Col, Container, Image, Modal, Nav, Navbar, Row } from 'react-bootstrap';
 import {
@@ -326,8 +326,8 @@ export default function Portfolio() {
                                         <Row>
                                             {theme ? <>
                                                 <div className="resumebtn">
-                                                    <a href="" target="_blank">
-                                                    {/* <a href="./assets/cv.pdf" target="_blank"> */}
+                                                    {/* <a href="" target="_blank"> */}
+                                                    <a href="./assets/cv.pdf" target="_blank">
                                                         <Button variant="outline-light" type="button" className="mt-4 rounded-5">
                                                             Get Resume 
                                                         </Button>
@@ -337,8 +337,8 @@ export default function Portfolio() {
                                             </>
                                                 :
                                                 <div className="resumebtn">
-                                                    <a href="" target="_blank">
-                                                    {/* <a href="./assets/cv.pdf" target="_blank"> */}
+                                                    {/* <a href="" target="_blank"> */}
+                                                    <a href="./assets/cv.pdf" target="_blank">
                                                         <Button variant="outline-dark" type="button" className="mt-4 rounded-5">
                                                             Get Resume 
                                                         </Button>
