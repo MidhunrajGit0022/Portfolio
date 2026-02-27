@@ -19,7 +19,7 @@ import Pre from "./pre";
 
 export default function Portfolio() {
     const [theme, settheme] = useState(false)
-    const [scrolled, setScrolled] = useState(false);
+    // const [scrolled, setScrolled] = useState(false);
     const [part, setPart] = useState('');
     const [button1Clicked, setButton1Clicked] = useState(true);
     const [button2Clicked, setButton2Clicked] = useState(false);
@@ -30,8 +30,8 @@ export default function Portfolio() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [loading, setLoading] = useState(true);
-    const [open, setOpen] = useState(false);
-    const form = useRef();
+    // const [open, setOpen] = useState(false);
+    // const form = useRef();
 
 
 
@@ -88,18 +88,18 @@ export default function Portfolio() {
         document.body.className = theme ? 'darkTheme' : 'lightTheme';
     }, [theme])
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const isScrolled = window.scrollY > 50;
-            setScrolled(isScrolled);
-        };
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const isScrolled = window.scrollY > 50;
+    //         setScrolled(isScrolled);
+    //     };
 
-        window.addEventListener('scroll', handleScroll);
+    //     window.addEventListener('scroll', handleScroll);
 
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
 
 
 
@@ -111,48 +111,83 @@ export default function Portfolio() {
         'Mobile App Developer',
     ];
 
-    let i = 0;
-    let offset = 0;
+    // let i = 0;
+    const iRef = useRef(0);
+    const offsetRef = useRef(0);
+    const forwardsRef = useRef(true);
+    const skipCountRef = useRef(0);
+    // let offset = 0;
     const len = words.length;
-    let forwards = true;
-    let skip_count = 0;
+    // let forwards = true;
+    // let skip_count = 0;
     const skip_delay = 15;
     const speed = 70;
 
 
+    // useEffect(() => {
+    //     const intervalId = setInterval(() => {
+    //         if (forwards) {
+    //             if (offset >= words[i].length) {
+    //                 ++skip_count;
+    //                 if (skip_count === skip_delay) {
+    //                     forwards = false;
+    //                     skip_count = 0;
+    //                 }
+    //             }
+    //         } else {
+    //             if (offset === 0) {
+    //                 forwards = true;
+    //                 i++;
+    //                 offset = 0;
+    //                 if (i >= len) {
+    //                     i = 0;
+    //                 }
+    //             }
+    //         }
+    //         setPart(words[i].substr(0, offset));
+    //         if (skip_count === 0) {
+    //             if (forwards) {
+    //                 offset++;
+    //             } else {
+    //                 offset--;
+    //             }
+    //         }
+    //     }, speed);
+
+    //     return () => clearInterval(intervalId);
+    // }, [i, offset, forwards, skip_count]);
+
     useEffect(() => {
-        const intervalId = setInterval(() => {
-            if (forwards) {
-                if (offset >= words[i].length) {
-                    ++skip_count;
-                    if (skip_count === skip_delay) {
-                        forwards = false;
-                        skip_count = 0;
-                    }
+    const intervalId = setInterval(() => {
+        if (forwardsRef.current) {
+            if (offsetRef.current >= words[iRef.current].length) {
+                ++skipCountRef.current;
+                if (skipCountRef.current === skip_delay) {
+                    forwardsRef.current = false;
+                    skipCountRef.current = 0;
                 }
+            }
+        } else {
+            if (offsetRef.current === 0) {
+                forwardsRef.current = true;
+                iRef.current++;
+                offsetRef.current = 0;
+                if (iRef.current >= len) {
+                    iRef.current = 0;
+                }
+            }
+        }
+        setPart(words[iRef.current].substr(0, offsetRef.current));
+        if (skipCountRef.current === 0) {
+            if (forwardsRef.current) {
+                offsetRef.current++;
             } else {
-                if (offset === 0) {
-                    forwards = true;
-                    i++;
-                    offset = 0;
-                    if (i >= len) {
-                        i = 0;
-                    }
-                }
+                offsetRef.current--;
             }
-            setPart(words[i].substr(0, offset));
-            if (skip_count === 0) {
-                if (forwards) {
-                    offset++;
-                } else {
-                    offset--;
-                }
-            }
-        }, speed);
-
-        return () => clearInterval(intervalId);
-    }, [i, offset, forwards, skip_count]);
-
+        }
+    }, speed);
+    return () => clearInterval(intervalId);
+}, []); // empty dependency array
 
     const handleNavLinkClick = () => {
         const navbarToggler = document.querySelector('.navbar-toggler');
