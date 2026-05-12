@@ -153,10 +153,12 @@ export default function Portfolio() {
 
         const words = [
             'Flutter Developer',
-            'MERN Stack Developer',
+            'Mobile App Developer',
+            'Cross-Platform App Developer',
             'Front-end Developer',
             'Back-end Developer',
-            'Mobile App Developer',
+            'MERN Stack Developer',
+            'Flutter & Dart Enthusiast',
         ];
         const len = words.length;
         const skip_delay = 15;
@@ -407,10 +409,7 @@ export default function Portfolio() {
                                             </Fade>
                                             {/* <h5 className="navheads text-secondary mb-3"><b><i>{'<--  Who am I  --/>'}</i></b></h5> */}
                                             <Fade direction="up" duration={1500} triggerOnce={true}>
-                                                <p className="aboutpara">Experienced developer adept in Flutter and MERN stack technologies
-                                                    (Flutter, Dart, Firebase, MongoDB, Express.js, React.js, Node.js).
-                                                    Skilled in frontend and backend development, with a focus on user-friendly design.
-                                                    Eager to collaborate and learn within a development team.</p>
+                                                <p className="aboutpara">Flutter Developer with experience in building cross-platform mobile applications using Flutter and Dart. Skilled in developing responsive and user-friendly applications with Firebase, REST API integration, local storage, authentication, and state management. Passionate about creating scalable, maintainable, and high-performance mobile applications with clean UI implementation. Familiar with MERN stack technologies including MongoDB, Express.js, React.js, and Node.js. Strong problem-solving skills, adaptability, and the ability to work effectively in collaborative development environments.</p>
                                             </Fade>
                                             <Fade direction="up" duration={1000} triggerOnce={true}>
                                                 <Row>
@@ -931,6 +930,102 @@ export default function Portfolio() {
                                                     />
                                                 </picture>
                                                 <div className="text-center mb-2 text-sm md:text-md">Material UI</div>
+                                            </div>
+                                        </Fade>
+                                    </Col>
+                                    <Col lg={2} md={3} sm={4} xs={6} className="rounded-5">
+                                        <Fade direction="up" duration={2200} triggerOnce={true}>
+                                            <div className="stackcontent mt-3">
+                                                <picture>
+                                                    <img
+                                                        src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
+                                                        alt="React"
+                                                        width="100"
+                                                        height="100"
+                                                        className="w-auto p-4 rounded-5"
+                                                    />
+                                                </picture>
+                                                <div className="text-center mb-2 text-sm md:text-md">Firebase</div>
+                                            </div>
+                                        </Fade>
+                                    </Col>
+                                    <Col lg={2} md={3} sm={4} xs={6} className="rounded-5">
+                                        <Fade direction="up" duration={2400} triggerOnce={true}>
+                                            <div className="stackcontent mt-3">
+                                                <picture>
+                                                    <img
+                                                        src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg"
+                                                        alt="React"
+                                                        width="100"
+                                                        height="100"
+                                                        className="w-auto p-4 rounded-5"
+                                                    />
+                                                </picture>
+                                                <div className="text-center mb-2 text-sm md:text-md">SQLite</div>
+                                            </div>
+                                        </Fade>
+                                    </Col>
+                                    <Col lg={2} md={3} sm={4} xs={6} className="rounded-5">
+                                        <Fade direction="up" duration={2600} triggerOnce={true}>
+                                            <div className="stackcontent mt-3">
+                                                <picture>
+                                                    <img
+                                                        src="https://plugins.jetbrains.com/files/12129/953327/icon/default.png"
+                                                        alt="React"
+                                                        width="100"
+                                                        height="100"
+                                                        className="w-auto p-4 rounded-5"
+                                                    />
+                                                </picture>
+                                                <div className="text-center mb-2 text-sm md:text-md">Bloc</div>
+                                            </div>
+                                        </Fade>
+                                    </Col>
+                                    <Col lg={2} md={3} sm={4} xs={6} className="rounded-5">
+                                        <Fade direction="up" duration={2800} triggerOnce={true}>
+                                            <div className="stackcontent mt-3">
+                                                <picture>
+                                                    <img
+                                                        src="https://camo.githubusercontent.com/2faf438fdd0c11b915289d7cb7e07faec7370897385ef8e6b8669fcd97930fe1/68747470733a2f2f6170692e696e746f70726f732e636f6d2f75706c6f6164732f323032332d30332f756e617574682d313637393339393231353830302d35333034626536346262383934396630623138653731623566393434383863302e706e67"
+                                                        alt="React"
+                                                        width="100"
+                                                        height="100"
+                                                        className="w-auto p-4 rounded-5"
+                                                    />
+                                                </picture>
+                                                <div className="text-center mb-2 text-sm md:text-md">GetX</div>
+                                            </div>
+                                        </Fade>
+                                    </Col>
+                                    <Col lg={2} md={3} sm={4} xs={6} className="rounded-5">
+                                        <Fade direction="up" duration={3000} triggerOnce={true}>
+                                            <div className="stackcontent mt-3">
+                                                <picture>
+                                                    <img
+                                                        src="https://gaganyadav.gallerycdn.vsassets.io/extensions/gaganyadav/rp-consumer/0.2.1/1674457972377/Microsoft.VisualStudio.Services.Icons.Default"
+                                                        alt="React"
+                                                        width="100"
+                                                        height="100"
+                                                        className="w-auto p-4 rounded-5"
+                                                    />
+                                                </picture>
+                                                <div className="text-center mb-2 text-sm md:text-md">Riverpod</div>
+                                            </div>
+                                        </Fade>
+                                    </Col>
+                                    <Col lg={2} md={3} sm={4} xs={6} className="rounded-5">
+                                        <Fade direction="up" duration={3200} triggerOnce={true}>
+                                            <div className="stackcontent mt-3">
+                                                <picture>
+                                                    <img
+                                                        src="https://avatars.githubusercontent.com/u/55202745?s=200&v=4"
+                                                        alt="React"
+                                                        width="100"
+                                                        height="100"
+                                                        className="w-auto p-4 rounded-5"
+                                                    />
+                                                </picture>
+                                                <div className="text-center mb-2 text-sm md:text-md">Hive</div>
                                             </div>
                                         </Fade>
                                     </Col>
