@@ -1191,7 +1191,7 @@ export default function Portfolio() {
                                                 </Col>
                                                 <Col lg={9}>
                                                     <span className="concthead">Location</span>
-                                                    <p className="contactcontent">Kerala, India</p>
+                                                    <p className="contactcontent">Kollam, Kerala, India</p>
                                                 </Col>
                                             </Row>
                                         </Fade>
@@ -1200,11 +1200,18 @@ export default function Portfolio() {
                                         <Fade direction="up" duration={2000} triggerOnce={true}>
                                             <Row className="bg-info1">
                                                 <Col lg={3} className="py-3 px-3 contactiocn">
-                                                    <i className="fa-solid fa-phone fa-lg iconcontact"></i>
+                                                    <a href="tel:+918086370435" className="iconcontact">
+                                                        <i className="fa-solid fa-phone fa-lg"></i>
+                                                    </a>
                                                 </Col>
                                                 <Col lg={9}>
                                                     <span className="concthead">Phone</span>
-                                                    <p className="contactcontent">+91 8086370435</p>
+                                                    <p className="contactcontent">     <a
+                                                        href="tel:+918086370435"
+                                                        style={{ textDecoration: "none", color: "inherit" }}
+                                                    >
+                                                        +91 8086370435
+                                                    </a></p>
                                                 </Col>
                                             </Row>
                                         </Fade>
@@ -1213,7 +1220,9 @@ export default function Portfolio() {
                                         <Fade direction="up" duration={2500} triggerOnce={true}>
                                             <Row className="bg-info1">
                                                 <Col lg={3} className="py-3 px-3 contactiocn">
-                                                    <i className="fa-solid fa-envelope fa-lg iconcontact"></i>
+                                                    <a href="mailto:midhunraj0022@gmail.com" className="iconcontact">
+                                                        <i className="fa-solid fa-envelope fa-lg"></i>
+                                                    </a>
                                                 </Col>
                                                 <Col lg={9}>
                                                     <span className="concthead">Email</span>
@@ -1223,7 +1232,7 @@ export default function Portfolio() {
 
                                                 </Col>
                                             </Row>
-                                        </Fade>
+                                        </Fade> 
                                     </Col>
                                     {/* <Col lg className="mx-lg-5 ">
                                     <Fade direction="up" duration={3000} triggerOnce={true}>
