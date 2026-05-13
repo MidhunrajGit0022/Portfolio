@@ -1274,6 +1274,7 @@ export default function Portfolio() {
                                 <i className="fa-brands fa-whatsapp"></i>
                             </a>
                         )} */}
+                        
                         {/* Section 6 Footer */}
                         <Container fluid className="footer">
                             <Row>
