@@ -938,14 +938,14 @@ export default function Portfolio() {
                                             <div className="stackcontent mt-3">
                                                 <picture>
                                                     <img
-                                                        src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
+                                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1920px-Figma-logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail"
                                                         alt="React"
                                                         width="100"
                                                         height="100"
                                                         className="w-auto p-4 rounded-5"
                                                     />
                                                 </picture>
-                                                <div className="text-center mb-2 text-sm md:text-md">Firebase</div>
+                                                <div className="text-center mb-2 text-sm md:text-md">Figma</div>
                                             </div>
                                         </Fade>
                                     </Col>
