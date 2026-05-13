@@ -1264,7 +1264,7 @@ export default function Portfolio() {
                             </Container>
                         </div>
                         {/* Section 5 Ended */}
-                        {showWhatsapp && (
+                        {/* {showWhatsapp && (
 
                             <a href="https://wa.me/918086370435"
                                 className="whatsapp-float"
@@ -1273,7 +1273,7 @@ export default function Portfolio() {
                             >
                                 <i className="fa-brands fa-whatsapp"></i>
                             </a>
-                        )}
+                        )} */}
                         {/* Section 6 Footer */}
                         <Container fluid className="footer">
                             <Row>
