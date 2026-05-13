@@ -32,8 +32,21 @@ export default function Portfolio() {
     const [loading, setLoading] = useState(true);
     // const [open, setOpen] = useState(false);
     // const form = useRef();
+    const [showWhatsapp, setShowWhatsapp] = useState(false);
+    const contactRef = useRef(null);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (contactRef.current) {
+                const contactTop = contactRef.current.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                setShowWhatsapp(contactTop <= windowHeight);
+            }
+        };
 
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     useEffect(() => {
         setTimeout(() => {
@@ -1172,7 +1185,7 @@ export default function Portfolio() {
                         {/* Section 4 Ended*/}
 
                         {/* Section 5 Contact */}
-                        <div id="Contact">
+                        <div id="Contact" ref={contactRef}>
                             <Container className="text-lg-center text-center p-lg-5 p-4 contactcontainer">
                                 <div className="my-4 mx-lg-5 mx-2">
                                     <Fade direction="up" duration={1000} triggerOnce={true}>
@@ -1232,7 +1245,7 @@ export default function Portfolio() {
 
                                                 </Col>
                                             </Row>
-                                        </Fade> 
+                                        </Fade>
                                     </Col>
                                     {/* <Col lg className="mx-lg-5 ">
                                     <Fade direction="up" duration={3000} triggerOnce={true}>
@@ -1251,6 +1264,16 @@ export default function Portfolio() {
                             </Container>
                         </div>
                         {/* Section 5 Ended */}
+                        {showWhatsapp && (
+
+                            <a href="https://wa.me/918086370435"
+                                className="whatsapp-float"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <i className="fa-brands fa-whatsapp"></i>
+                            </a>
+                        )}
                         {/* Section 6 Footer */}
                         <Container fluid className="footer">
                             <Row>
