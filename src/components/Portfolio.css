@@ -734,16 +734,35 @@
   animation: bounce 2s infinite, fadeInRight 0.5s ease-in-out;
 }
 
-#root .custom-scroll-to-top {
+/* #root .custom-scroll-to-top {
   background-color: var(--scrolltotoproot);
+} */
+/* Light mode: dark background, white arrow */
+.lightTheme #root .custom-scroll-to-top {
+  background-color: #1C1E21;
+}
+
+/* Dark mode: white background, dark arrow */
+.darkTheme #root .custom-scroll-to-top {
+  background-color: #ffffff;
+}
+
+/* Arrow color for dark mode (svg fill is #fff by default) */
+.darkTheme .custom-scroll-to-top svg {
+  fill: #1C1E21;
 }
 
 .custom-scroll-to-top svg {
-  width: 70%;
-  height: 70%;
+  width: 55%;
+  height: 55%;
   fill: #fff;
 }
 
+.darkTheme .custom-scroll-to-top svg {
+  width: 55%;
+  height: 55%;
+  fill: #1C1E21;
+}
 
 /* Session project modal*/
 
