@@ -1064,14 +1064,14 @@ export default function Portfolio() {
                                             <ButtonGroup>
                                                 <Button className={` rounded-start-5   ${toggle === 'all' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('all')}>ALL</Button>
                                                 <Button className={` ${toggle === 'web app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('web app')}>WEB APP'S</Button>
-                                                <Button className={` rounded-end-5  ${toggle === 'android app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('android app')}>ANDROID APP'S</Button>
+                                                <Button className={` rounded-end-5  ${toggle === 'android app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('android app')}>MOBILE APP'S</Button>
                                             </ButtonGroup>
                                         </>
                                             :
                                             <ButtonGroup className="">
                                                 <Button className={`rounded-start-5 ${toggle === 'all' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('all')}>ALL</Button>
                                                 <Button className={` ${toggle === 'web app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('web app')}>WEB APP'S</Button>
-                                                <Button className={`rounded-end-5 ${toggle === 'android app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('android app')}>ANDROID APP'S</Button>
+                                                <Button className={`rounded-end-5 ${toggle === 'android app' ? 'active' : ''}`} variant={theme ? "outline-light" : "outline-dark"} onClick={() => handleCategoryClick('android app')}>MOBILE APP'S</Button>
                                             </ButtonGroup>
                                         }
                                     </Fade>
