@@ -1,52 +1,75 @@
 export const projects = [
-   
+
   {
-  id: 12,
-  title: "Vikn ERP",
-  // date: "2024",
-  description:
+    id: 12,
+    title: "Vikn ERP",
+    // date: "2024",
+    description:
       "Vikn ERP is a Flutter-based Enterprise Resource Planning (ERP) application developed to streamline sales, purchase, inventory, invoicing, stock management, and branch transfer operations. The system supports offline functionality with local data storage, real-time synchronization, API integration, and responsive UI to improve business workflow efficiency.",
-  image:
+    image:
       "../assets/erpapp.png",
-  tags: [
-    "Flutter",
-    "GetX",
-    "REST API",    "Offline Support",
-    "Sqflite",
-    "ERP System",
-    "Inventory Management",
-    "Invoice Management",
-  ],
-  category: "android app",
-  github: "",
-  role: "Mobile App",
-  webapp: "https://play.google.com/store/apps/details?id=com.vikncodes.viknerp",
-},
-{
-  id: 13,
-  title: "Rassasy",
-  // date: "2024",
-  description:
+    tags: [
+      "Flutter",
+      "GetX",
+      "REST API", "Offline Support",
+      "Sqflite",
+      "ERP System",
+      "Inventory Management",
+      "Invoice Management",
+    ],
+    category: "android app",
+    github: "",
+    role: "Mobile App",
+    webapp: "https://play.google.com/store/apps/details?id=com.vikncodes.viknerp",
+  },
+  {
+    id: 13,
+    title: "Rassasy",
+    // date: "2024",
+    description:
       "Rassasy Restaurant POS is a Flutter-based restaurant Point of Sale (POS) application developed to streamline restaurant operations including order management, product handling, invoicing, tax management, customer management, and billing processes. The system supports offline functionality, local data storage, API integration, thermal printing, and responsive UI to ensure smooth restaurant business operations.",
-  image:
+    image:
       "../assets/rassasy.png",
-  tags: [
-    "Flutter",
-    "GetX",
-    "REST API",
-    "Offline Support",
-    "Sqflite",
-    "Restaurant POS",
-    "Thermal Printing",
-    "Invoice Management",
-    "Customer Management",
-  ],
-  category: "android app",
-  github: "",
-  role: "Mobile App",
-  webapp: "https://play.google.com/store/apps/details?id=com.rassasy_tab.erp&hl=en_IN",
-},
- {
+    tags: [
+      "Flutter",
+      "GetX",
+      "REST API",
+      "Offline Support",
+      "Sqflite",
+      "Restaurant POS",
+      "Thermal Printing",
+      "Invoice Management",
+      "Customer Management",
+    ],
+    category: "android app",
+    github: "",
+    role: "Mobile App",
+    webapp: "https://play.google.com/store/apps/details?id=com.rassasy_tab.erp&hl=en_IN",
+  },
+  {
+    id: 14,
+    title: "Rassasy Kiosk",
+    // date: "2024",
+    description:
+      "Rassasy Kiosk is a Flutter-based restaurant self-ordering kiosk application designed to streamline customer ordering and billing processes. The system enables customers to place table-wise orders, manage customer details, browse menu items, and generate invoices through an interactive self-service interface. Developed using Flutter, GetX, and REST API integration, the application ensures efficient restaurant order management and an improved customer experience.",
+    image:
+      "../assets/rassasykiosk.png",
+    tags: [
+      "Flutter",
+      "GetX",
+      "REST API",
+      "Restaurant Kiosk",
+      "Self Ordering",
+      "Table-wise Ordering",
+      "Invoice Management",
+      "Customer Management",
+    ],
+    category: "android app",
+    github: "",
+    role: "Kiosk App",
+    webapp: "",
+  },
+  {
     id: 11,
     title: "ViknBooks POS",
     // date: "2024",
