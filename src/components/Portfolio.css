@@ -737,17 +737,15 @@
 /* #root .custom-scroll-to-top {
   background-color: var(--scrolltotoproot);
 } */
-/* Light mode: dark background, white arrow */
+
 .lightTheme #root .custom-scroll-to-top {
   background-color: #1C1E21;
 }
 
-/* Dark mode: white background, dark arrow */
 .darkTheme #root .custom-scroll-to-top {
   background-color: #ffffff;
 }
 
-/* Arrow color for dark mode (svg fill is #fff by default) */
 .darkTheme .custom-scroll-to-top svg {
   fill: #1C1E21;
 }
