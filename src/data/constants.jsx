@@ -70,6 +70,28 @@ export const projects = [
     webapp: "",
   },
   {
+    id: 15,
+    title: "Netflix Clone",
+    // date: "2024",
+    description:
+      "Netflix Clone is a Flutter-based streaming application designed to provide users with a seamless movie and TV show browsing experience. The app features a modern UI, smooth navigation, and integration with the Netflix API to display up-to-date content. Developed using Flutter and GetX, the application ensures a responsive and engaging user experience.",
+    image:
+      "../assets/netflixclone.png",
+    tags: [
+      "Flutter",
+      "Dart",
+      "Bloc",
+      "REST API",
+      "TMDB API",
+      "Dio/HTTP",
+      "Clean Architecture",
+    ],
+    category: "android app",
+    github: "",
+    role: "Mobile App",
+    webapp: "",
+  },
+  {
     id: 11,
     title: "ViknBooks POS",
     // date: "2024",
