@@ -73,6 +73,8 @@ export const projects = [
     id: 15,
     title: "Netflix Clone",
     // date: "2024",
+        video:
+      "../assets/netflixvideo.mp4",
     description:
       "A Flutter-based Netflix-inspired movie discovery application built using the TMDB API. The app allows users to browse trending, popular, top-rated, and upcoming movies, search titles instantly, view detailed movie information, watch trailers, and manage a personalized favorites list. It follows Clean Architecture with BLoC state management to provide a scalable, maintainable, and responsive user experience.",
     image:
