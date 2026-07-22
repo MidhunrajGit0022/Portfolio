@@ -10,7 +10,7 @@ export const projects = [
       "../assets/erpapp.png",
     tags: [
       "Flutter",
-      "GetX",
+      "Dart",
       "REST API", "Offline Support",
       "Sqflite",
       "ERP System",
@@ -32,7 +32,7 @@ export const projects = [
       "../assets/rassasy.png",
     tags: [
       "Flutter",
-      "GetX",
+      "Dart",
       "REST API",
       "Offline Support",
       "Sqflite",
@@ -51,12 +51,12 @@ export const projects = [
     title: "Rassasy Kiosk",
     // date: "2024",
     description:
-      "Rassasy Kiosk is a Flutter-based restaurant self-ordering kiosk application designed to streamline customer ordering and billing processes. The system enables customers to place table-wise orders, manage customer details, browse menu items, and generate invoices through an interactive self-service interface. Developed using Flutter, GetX, and REST API integration, the application ensures efficient restaurant order management and an improved customer experience.",
+      "Rassasy Kiosk is a Flutter-based restaurant self-ordering kiosk application designed to streamline customer ordering and billing processes. The system enables customers to place table-wise orders, manage customer details, browse menu items, and generate invoices through an interactive self-service interface. Developed using Flutter, Dart, and REST API integration, the application ensures efficient restaurant order management and an improved customer experience.",
     image:
       "../assets/rassasykiosk.png",
     tags: [
       "Flutter",
-      "GetX",
+      "Dart",
       "REST API",
       "Restaurant Kiosk",
       "Self Ordering",
@@ -103,7 +103,7 @@ export const projects = [
       "../assets/viknbookspos.png",
     tags: [
       "Flutter",
-      "GetX",
+      "Dart",
       "REST API",
       "Sqflite",
       "WebSocket",
