@@ -165,6 +165,7 @@ export default function Portfolio() {
     useEffect(() => {
 
         const words = [
+            'Software Developer',
             'Flutter Developer',
             'Mobile App Developer',
             'Cross-Platform App Developer',
