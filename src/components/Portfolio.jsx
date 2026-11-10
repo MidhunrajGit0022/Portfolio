@@ -473,7 +473,7 @@ export default function Portfolio() {
                                                             <Row>
                                                                 <div>
                                                                     <Row>
-                                                                        <span className="aboutrole">2023 - 2024</span>
+                                                                        <span className="aboutrole">May 2023 - July 2024</span>
                                                                     </Row>
                                                                     <Row>
                                                                         <span className="aboutcontent">Softzane Solutions, Ayoor</span>
@@ -483,7 +483,7 @@ export default function Portfolio() {
                                                             <Row>
                                                                 <div>
                                                                     <Row>
-                                                                        <span className="aboutrole">2024 - Current</span>
+                                                                        <span className="aboutrole">Sep 2024 - Apr 2026</span>
                                                                     </Row>
                                                                     <Row>
                                                                         <span className="aboutcontent">Vikn Codes, Cyber Park, Calicut</span>
