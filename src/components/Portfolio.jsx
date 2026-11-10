@@ -1000,7 +1000,7 @@ export default function Portfolio() {
                                             <div className="stackcontent mt-3">
                                                 <picture>
                                                     <img
-                                                        src="https://camo.githubusercontent.com/2faf438fdd0c11b915289d7cb7e07faec7370897385ef8e6b8669fcd97930fe1/68747470733a2f2f6170692e696e746f70726f732e636f6d2f75706c6f6164732f323032332d30332f756e617574682d313637393339393231353830302d35333034626536346262383934396630623138653731623566393434383863302e706e67"
+                                                        src="https://cdn.iconscout.com/icon/free/png-512/free-getx-icon-svg-download-png-14550175.png?f=webp&w=512"
                                                         alt="React"
                                                         width="100"
                                                         height="100"
